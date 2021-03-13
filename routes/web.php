@@ -3,7 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
+use App\Http\Resources\BagtagIndex;
+use App\Models\Bagtag;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,9 +22,10 @@ Route::get('/', function () {
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
-        'tags' => \App\Models\Bagtag::all()
+        'tags' => BagtagIndex::collection(Bagtag::all()) //something wrong here returning builder not collection
     ]);
 });
+//Route::redirect('/','/register');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');

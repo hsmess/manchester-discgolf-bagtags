@@ -56,10 +56,34 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $appends = [
-        'profile_photo_url',
+        'profile_photo_url','currentTagPosition'
     ];
     public function bagtags()
     {
         return $this->belongsToMany(Bagtag::class)->using(BagtagUser::class);
+    }
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+    public function shippingAddress(){
+        return $this->hasOne(Address::class,'id','shipping_address_id');
+    }
+    public function getCurrentTagPositionAttribute(){
+        $tag = $this->bagtags()->latest()->first();
+        if($tag != null){
+            return $tag->tag_number;
+        }
+        else{
+            return "Unassigned";
+        }
+    }
+    public function getDonationAmountAttribute(){
+        $payment = $this->payments()->latest()->first();
+        $deductions = 500;
+        if($this->shipping_address_id != null){
+            $deductions = $deductions + 390;
+        }
+        return $payment->amount - $deductions;
     }
 }

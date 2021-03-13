@@ -54,9 +54,9 @@
                                     leave-to-class="opacity-0 scale-95"
                                 >
                                     <div v-show="showMenu" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                                        <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                                        <a href="/dashboard" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100" role="menuitem">Your Profile</a>
 
-                                        <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100" role="menuitem">Settings</a>
+<!--                                        <a href="#" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100" role="menuitem">Settings</a>-->
 
                                         <form method="POST">
                                             <a href="#" @click="logout()" class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100" role="menuitem">Sign Out</a>
@@ -144,9 +144,9 @@
                             </button>
                         </div>
                         <div class="mt-3 px-2 space-y-1" v-if="user != null" >
-                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-yellow-500 hover:bg-opacity-75">Your Profile</a>
+                            <a href="/dashboard" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-yellow-500 hover:bg-opacity-75">Your Profile</a>
 
-                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-yellow-500 hover:bg-opacity-75">Settings</a>
+<!--                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-yellow-500 hover:bg-opacity-75">Settings</a>-->
 
                             <a href="#" @click="logout()" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-yellow-500 hover:bg-opacity-75">Sign out</a>
                         </div>

@@ -20005,7 +20005,6 @@ select {
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -32718,9 +32717,11 @@ select {
           animation: bounce 1s infinite;
 }
 
-.mdg-logo{
-  max-width:
-}
+/*.mdg-logo{*/
+
+/*    max-width:*/
+
+/*}*/
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -51980,7 +51981,6 @@ select {
   }
 
   .sm\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -83873,7 +83873,6 @@ select {
   }
 
   .md\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -115766,7 +115765,6 @@ select {
   }
 
   .lg\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -147659,7 +147657,6 @@ select {
   }
 
   .xl\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -179552,7 +179549,6 @@ select {
   }
 
   .\32xl\:sticky {
-    position: -webkit-sticky;
     position: sticky;
   }
 
