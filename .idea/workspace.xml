@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c651e129-bada-49a4-bf55-6e6182511aa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/markdown/policy.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/markdown/policy.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/markdown/terms.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/markdown/terms.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Pay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Pay.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +208,8 @@
       <workItem from="1615231009082" duration="7236000" />
       <workItem from="1615303205478" duration="597000" />
       <workItem from="1615550019003" duration="18031000" />
-      <workItem from="1615886346368" duration="1800000" />
+      <workItem from="1615886346368" duration="2780000" />
+      <workItem from="1615905846408" duration="623000" />
     </task>
     <servers />
   </component>
