@@ -69,7 +69,11 @@ class ApiController extends Controller
             'amount' => $tagOrder->amount,
             'currency' => 'gbp',
             'customer' =>   $user->stripe_customer_token,
-            'setup_future_usage' => 'on_session'
+            'setup_future_usage' => 'on_session',
+            'metadata' => [
+                'name' => $user->name,
+                'email' => $user->email
+            ]
         ]);
         $tagOrder->payment_intent_id = $payment_intent->id;
         $tagOrder->save();

@@ -512,7 +512,7 @@
                     'paymentConfirmed': false
                 }).then(function (response) {
                     //next bit here
-                    console.log(response.data);
+                    // console.log(response.data);
                     self.stripe.stripe.confirmCardPayment(response.data.client_secret,{
                         payment_method: {
                             card: self.stripe.card
