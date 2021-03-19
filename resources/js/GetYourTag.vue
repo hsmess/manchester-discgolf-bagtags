@@ -14,6 +14,7 @@
 
                 All users will sign up via the system, and your initial tag will be allocated by the size of donation you make to the Lilford campaign... So what are you waiting for!
 
+                Please note that by purchasing a BagTag you will also become a member of Manchester Disc Golf for free.
                 <inertia-link href="/buy">
                     <div class="mt-3 flex items-center text-sm font-semibold text-yellow-700">
                         <div>Get Your Tag</div>

@@ -61,7 +61,10 @@ class ApiController extends Controller
         }
         if($customer === null)
         {
-           $customer =  Customer::create();
+           $customer =  Customer::create([
+               'name' => $user->name,
+               'email' => $user->email
+           ]);
         }
         $user->stripe_customer_token = $customer->id;
         $user->save();

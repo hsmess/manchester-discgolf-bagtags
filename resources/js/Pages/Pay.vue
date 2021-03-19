@@ -149,16 +149,17 @@
                                     </div>
                                     <div class="bg-gray-50 px-4 py-5 sm:p-6">
                                         <div> 1x 2021 Manchester Bag Tag - <span class="text-gray-900 text-lg">£{{ tagCost }}</span></div>
+                                        <div> 1x 2021 MDG Membership - <span class="text-gray-900 text-lg">£0.00</span></div>
                                         <div v-if="collection === 'shipping'"> 1x Royal Mail Shipping - <span class="text-gray-900 text-lg">£{{shippingCost}}</span></div>
                                         <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>
-                                        <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>            </div>
+                                        <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>  </div>
                                 </div>
                                 <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
                                     <div class="md:grid md:grid-cols-3 md:gap-6">
                                         <div class="md:col-span-1">
                                             <h3 class="text-lg font-medium leading-6 text-gray-900">Buy your tag</h3>
                                             <p class="mt-1 text-sm text-gray-500">
-                                                Please select your options, and then click next to proceed to the fundraiser.
+                                                Please select your options, and then click next to proceed to the fundraiser. Buying a bagtag also gets you Manchester Disc Golf membership for 2021.
                                             </p>
                                         </div>
                                         <div class="mt-5 md:mt-0 md:col-span-2">
@@ -246,6 +247,7 @@
                                 </div>
                                 <div class="bg-gray-50 px-4 py-5 sm:p-6">
                                     <div> 1x 2021 Manchester Bag Tag - <span class="text-gray-900 text-lg">£{{ tagCost }}</span></div>
+                                    <div> 1x 2021 MDG Membership - <span class="text-gray-900 text-lg">£0.00</span></div>
                                     <div v-if="collection === 'shipping'"> 1x Royal Mail Shipping - <span class="text-gray-900 text-lg">£{{shippingCost}}</span></div>
                                     <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>
                                     <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>
@@ -254,7 +256,7 @@
                             <p class="mt-4 text-sm text-gray-900">
                                 We are currently doing a fundraiser to support the installation of our new course in Lilford park, with the aim to put some baskets in by this summer.
                                 Your <strong>initial</strong> tag will be allocated based on the amount you contribute to the fundraiser, so feel free to be generous.
-                                There's also some cool rewards available for specific donation amounts. Click on one to add it to your donation amount.
+                                There's also some cool rewards available for specific donation amounts. Click on one to add it to your donation amount. Please note that these rewards will not be immediately available, but will be fulfilled when possible.
                             </p>
                             <!-- This example requires Tailwind CSS v2.0+ -->
                             <div>
@@ -361,6 +363,7 @@
                                 </div>
                                 <div class="bg-gray-50 px-4 py-5 sm:p-6">
                                     <div> 1x 2021 Manchester Bag Tag - <span class="text-gray-900 text-lg">£{{ tagCost }}</span></div>
+                                    <div> 1x 2021 MDG Membership - <span class="text-gray-900 text-lg">£0.00</span></div>
                                     <div v-if="collection === 'shipping'"> 1x Royal Mail Shipping - <span class="text-gray-900 text-lg">£{{shippingCost}}</span></div>
                                     <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>
                                     <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>
@@ -405,10 +408,11 @@
                                         <span >£{{totalCost}} paid on {{  new Date().toLocaleString() }}</span>
                                     </p>
                                 </div>
-                                <button @click="window.location.href='/dashboard'" type="button" class="inline-flex items-center px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
-                                    Go To Your Dashboard
-                                </button>
                             </div>
+
+                            <a href="/dashboard" type="button" class="mt-3 ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400">
+                                Go To Your Dashboard
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -627,7 +631,7 @@
         }
         /* Buttons and links */
         button {
-            background: linear-gradient(270deg,rgba(251, 191, 36,1),#ffffff);
+            background: linear-gradient(270deg,rgba(251, 191, 36,1),#fee8b1);
             color: #ffffff;
             border-radius: 0 0 8px 8px;
             border: 0;
