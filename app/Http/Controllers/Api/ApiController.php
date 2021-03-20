@@ -75,7 +75,8 @@ class ApiController extends Controller
             'setup_future_usage' => 'on_session',
             'metadata' => [
                 'name' => $user->name,
-                'email' => $user->email
+                'email' => $user->email,
+                'source' => 'bagtag-app'
             ]
         ]);
         $tagOrder->payment_intent_id = $payment_intent->id;

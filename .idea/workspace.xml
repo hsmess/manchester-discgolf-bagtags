@@ -10,8 +10,6 @@
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/GetYourTag.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/GetYourTag.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Pay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Pay.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +213,8 @@
       <workItem from="1615550019003" duration="18031000" />
       <workItem from="1615886346368" duration="2780000" />
       <workItem from="1615905846408" duration="2399000" />
-      <workItem from="1616185251548" duration="5949000" />
+      <workItem from="1616185251548" duration="6152000" />
+      <workItem from="1616278625385" duration="29000" />
     </task>
     <servers />
   </component>
