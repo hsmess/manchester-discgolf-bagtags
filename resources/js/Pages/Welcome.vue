@@ -71,7 +71,7 @@
        </div>
        <div class="px-4 py-4 sm:px-0">
            <div class="border-4 border-gray-200 rounded-lg bg-gray-50 shadow ">
-               <ul class="divide-y divide-gray-200">
+               <ul class="divide-y divide-gray-200" v-if="parsed_tags.length > 0">
                    <li v-for="tag in parsed_tags">
                        <div class="block hover:bg-yellow-200">
                            <div class="px-4 py-4 sm:px-6">
@@ -112,6 +112,19 @@
                                            <span v-else>Never</span>
                                        </p>
                                    </div>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+               </ul>
+               <ul class="divide-y divide-gray-200" v-else>
+                   <li>
+                       <div class="block hover:bg-yellow-200">
+                           <div class="px-4 py-4 sm:px-6">
+                               <div class="flex items-center justify-between">
+                                   <p class="text-sm font-medium text-yellow-600 truncate">
+                                       No Tags here! Tags launch April 1st
+                                   </p>
                                </div>
                            </div>
                        </div>

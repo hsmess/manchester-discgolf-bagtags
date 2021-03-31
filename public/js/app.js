@@ -6312,6 +6312,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     canLogin: Boolean,
@@ -38748,193 +38761,228 @@ var render = function() {
           staticClass: "border-4 border-gray-200 rounded-lg bg-gray-50 shadow "
         },
         [
-          _c(
-            "ul",
-            { staticClass: "divide-y divide-gray-200" },
-            _vm._l(_vm.parsed_tags, function(tag) {
-              return _c("li", [
-                _c("div", { staticClass: "block hover:bg-yellow-200" }, [
-                  _c("div", { staticClass: "px-4 py-4 sm:px-6" }, [
-                    _c(
-                      "div",
-                      { staticClass: "flex items-center justify-between" },
-                      [
+          _vm.parsed_tags.length > 0
+            ? _c(
+                "ul",
+                { staticClass: "divide-y divide-gray-200" },
+                _vm._l(_vm.parsed_tags, function(tag) {
+                  return _c("li", [
+                    _c("div", { staticClass: "block hover:bg-yellow-200" }, [
+                      _c("div", { staticClass: "px-4 py-4 sm:px-6" }, [
                         _c(
-                          "p",
-                          {
-                            staticClass:
-                              "text-sm font-medium text-yellow-600 truncate"
-                          },
+                          "div",
+                          { staticClass: "flex items-center justify-between" },
                           [
-                            _vm._v(
-                              "\n                                    Tag #" +
-                                _vm._s(tag.tag_number) +
-                                "\n                                "
+                            _c(
+                              "p",
+                              {
+                                staticClass:
+                                  "text-sm font-medium text-yellow-600 truncate"
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    Tag #" +
+                                    _vm._s(tag.tag_number) +
+                                    "\n                                "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "ml-2 flex-shrink-0 flex" },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-sm text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300",
+                                    attrs: { type: "button" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.launchEditModal(tag, $event)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                        Update\n                                    "
+                                    )
+                                  ]
+                                )
+                              ]
                             )
                           ]
                         ),
                         _vm._v(" "),
-                        _c("div", { staticClass: "ml-2 flex-shrink-0 flex" }, [
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-sm text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.launchEditModal(tag, $event)
-                                }
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                        Update\n                                    "
-                              )
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "mt-2 sm:flex sm:justify-between" },
-                      [
-                        _c("div", { staticClass: "sm:flex" }, [
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "flex items-center text-sm text-gray-500"
-                            },
-                            [
-                              _c(
-                                "svg",
-                                {
-                                  staticClass:
-                                    "flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400",
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    viewBox: "0 0 20 20",
-                                    fill: "currentColor",
-                                    "aria-hidden": "true"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      d:
-                                        "M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(
-                                "\n                                        " +
-                                  _vm._s(tag.owner) +
-                                  "\n                                    "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "p",
-                            {
-                              staticClass:
-                                "mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6"
-                            },
-                            [
-                              _c(
-                                "svg",
-                                {
-                                  staticClass:
-                                    "flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400",
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    viewBox: "0 0 20 20",
-                                    fill: "currentColor"
-                                  }
-                                },
-                                [
-                                  _c("path", {
-                                    attrs: {
-                                      "fill-rule": "evenodd",
-                                      d:
-                                        "M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z",
-                                      "clip-rule": "evenodd"
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(
-                                "\n                                        Last defended: " +
-                                  _vm._s(tag.lastActivity) +
-                                  "\n                                    "
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
                         _c(
                           "div",
-                          {
-                            staticClass:
-                              "mt-2 flex items-center text-sm text-gray-500 sm:mt-0"
-                          },
+                          { staticClass: "mt-2 sm:flex sm:justify-between" },
                           [
+                            _c("div", { staticClass: "sm:flex" }, [
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "flex items-center text-sm text-gray-500"
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass:
+                                        "flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400",
+                                      attrs: {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        viewBox: "0 0 20 20",
+                                        fill: "currentColor",
+                                        "aria-hidden": "true"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(
+                                    "\n                                        " +
+                                      _vm._s(tag.owner) +
+                                      "\n                                    "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6"
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass:
+                                        "flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400",
+                                      attrs: {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        viewBox: "0 0 20 20",
+                                        fill: "currentColor"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          "fill-rule": "evenodd",
+                                          d:
+                                            "M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z",
+                                          "clip-rule": "evenodd"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(
+                                    "\n                                        Last defended: " +
+                                      _vm._s(tag.lastActivity) +
+                                      "\n                                    "
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
                             _c(
-                              "svg",
+                              "div",
                               {
                                 staticClass:
-                                  "flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400",
-                                attrs: {
-                                  xmlns: "http://www.w3.org/2000/svg",
-                                  viewBox: "0 0 20 20",
-                                  fill: "currentColor",
-                                  "aria-hidden": "true"
-                                }
+                                  "mt-2 flex items-center text-sm text-gray-500 sm:mt-0"
                               },
                               [
-                                _c("path", {
-                                  attrs: {
-                                    "fill-rule": "evenodd",
-                                    d:
-                                      "M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z",
-                                    "clip-rule": "evenodd"
-                                  }
-                                })
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass:
+                                      "flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400",
+                                    attrs: {
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      viewBox: "0 0 20 20",
+                                      fill: "currentColor",
+                                      "aria-hidden": "true"
+                                    }
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        "fill-rule": "evenodd",
+                                        d:
+                                          "M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z",
+                                        "clip-rule": "evenodd"
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                tag.lastTransfer
+                                  ? _c("p", [
+                                      _vm._v(
+                                        "\n                                        Last Transfer:\n                                        "
+                                      ),
+                                      tag.lastTransfer.ymd != null
+                                        ? _c(
+                                            "time",
+                                            {
+                                              attrs: {
+                                                datetime: tag.lastTransfer.ymd
+                                              }
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(tag.lastTransfer.human)
+                                              )
+                                            ]
+                                          )
+                                        : _c("span", [_vm._v("Never")])
+                                    ])
+                                  : _vm._e()
                               ]
-                            ),
-                            _vm._v(" "),
-                            tag.lastTransfer
-                              ? _c("p", [
-                                  _vm._v(
-                                    "\n                                        Last Transfer:\n                                        "
-                                  ),
-                                  tag.lastTransfer.ymd != null
-                                    ? _c(
-                                        "time",
-                                        {
-                                          attrs: {
-                                            datetime: tag.lastTransfer.ymd
-                                          }
-                                        },
-                                        [_vm._v(_vm._s(tag.lastTransfer.human))]
-                                      )
-                                    : _c("span", [_vm._v("Never")])
-                                ])
-                              : _vm._e()
+                            )
                           ]
                         )
-                      ]
-                    )
+                      ])
+                    ])
+                  ])
+                }),
+                0
+              )
+            : _c("ul", { staticClass: "divide-y divide-gray-200" }, [
+                _c("li", [
+                  _c("div", { staticClass: "block hover:bg-yellow-200" }, [
+                    _c("div", { staticClass: "px-4 py-4 sm:px-6" }, [
+                      _c(
+                        "div",
+                        { staticClass: "flex items-center justify-between" },
+                        [
+                          _c(
+                            "p",
+                            {
+                              staticClass:
+                                "text-sm font-medium text-yellow-600 truncate"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    No Tags here! Tags launch April 1st\n                                "
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ])
                   ])
                 ])
               ])
-            }),
-            0
-          )
         ]
       )
     ])
