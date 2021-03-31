@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/user/pay/confirm',[ApiController::class,'confirm']);
 Route::post('/user/pay',[ApiController::class,'pay']);
+Route::post('/tag/{bagtag}/update',[ApiController::class,'update']);

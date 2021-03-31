@@ -6,6 +6,7 @@ use App\Models\Bagtag;
 use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class assign_paid_users_tags extends Command
 {
@@ -58,6 +59,7 @@ class assign_paid_users_tags extends Command
             $t->save();
             $initial_tag++;
             $item->bagtags()->attach($t);
+            Log::info($item->name . ' Gets tag ' . $t->tag_number);
         });
 
         return 0;

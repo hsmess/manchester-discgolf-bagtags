@@ -11,11 +11,11 @@ class Bagtag extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class)->using(BagtagUser::class);
+        return $this->belongsToMany(User::class)->using(BagtagUser::class)->withTimestamps();
     }
 
     public function owner()
     {
-        return $this->users()->latest()->first();
+        return $this->users->sortByDesc('pivot.created_at')->first();
     }
 }

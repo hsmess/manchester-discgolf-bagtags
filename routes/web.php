@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\Bagtag;
 use App\Http\Resources\Bagtag as BagtagResource;
+use App\Http\Resources\User as UserResource;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,17 +17,18 @@ use App\Http\Resources\Bagtag as BagtagResource;
 |
 */
 
-//Route::get('/', function () {
-//    ray(Bagtag::all());
-//    return Inertia::render('Welcome', [
-//        'canLogin' => Route::has('login'),
-//        'canRegister' => Route::has('register'),
-//        'laravelVersion' => Application::VERSION,
-//        'phpVersion' => PHP_VERSION,
-//        'tags' => BagtagResource::collection(Bagtag::all()) //something wrong here returning builder not collection
-//    ]);
-//});
-Route::redirect('/','/register');
+Route::get('/', function () {
+    ray(Bagtag::all());
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+        'tags' => BagtagResource::collection(Bagtag::all()),
+        'users' => UserResource::collection(\App\Models\User::where('paid_2021',true)->get()->sortBy('name'))
+    ]);
+});
+//Route::redirect('/','/register');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');

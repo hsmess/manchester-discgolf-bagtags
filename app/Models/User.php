@@ -60,7 +60,7 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
     public function bagtags()
     {
-        return $this->belongsToMany(Bagtag::class)->using(BagtagUser::class);
+        return $this->belongsToMany(Bagtag::class)->using(BagtagUser::class)->withTimestamps();
     }
     public function payments()
     {
@@ -70,7 +70,7 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(Address::class,'id','shipping_address_id');
     }
     public function getCurrentTagPositionAttribute(){
-        $tag = $this->bagtags()->latest()->first();
+        $tag = $this->bagtags->sortByDesc('pivot.created_at')->first();
         if($tag != null){
             return $tag->tag_number;
         }
@@ -79,7 +79,11 @@ class User extends Authenticatable implements MustVerifyEmail
         }
     }
     public function getDonationAmountAttribute(){
-        $payment = $this->payments()->latest()->first();
+        $payment = $this->payments->first();
+        if($payment === null)
+        {
+            return 0;
+        }
         $deductions = 500;
         if($this->shipping_address_id != null){
             $deductions = $deductions + 390;

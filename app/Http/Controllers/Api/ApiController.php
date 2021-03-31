@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Bagtag;
 use App\Models\Address;
 use App\Models\Payment;
 use App\Models\TagOrder;
@@ -133,5 +134,20 @@ class ApiController extends Controller
             return ['error'=> 'No associated balance transaction'];
         }
         return ['success'=>'Payment Approved!'];
+    }
+
+    public function update(\App\Models\Bagtag $bagtag, Request $request)
+    {
+        $user = User::where('id',$request->new_user_id)->firstOrFail();
+//        $user_old_tag = $user->bagtags->sortByDesc('pivot.created_at')->first();
+//        $user_old_tag->currently_unassigned = true;
+//        $user_old_tag->save();
+        $user->bagtags()->attach($bagtag);
+//        $bagtag->currently_unassigned = false;
+        $bagtag->save();
+        return [
+            'tags' => Bagtag::collection(\App\Models\Bagtag::all()),
+            'users' => \App\Http\Resources\User::collection(\App\Models\User::where('paid_2021',true)->get()->sortBy('name'))
+        ];
     }
 }
