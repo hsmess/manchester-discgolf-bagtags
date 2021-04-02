@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c651e129-bada-49a4-bf55-6e6182511aa6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Console/Commands/EmailEveryoneCurrentPos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/EmailTagPos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c651e129-bada-49a4-bf55-6e6182511aa6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,7 +211,8 @@
       <workItem from="1616278625385" duration="308000" />
       <workItem from="1616406537379" duration="1177000" />
       <workItem from="1617118560577" duration="14194000" />
-      <workItem from="1617266434797" duration="680000" />
+      <workItem from="1617266434797" duration="2016000" />
+      <workItem from="1617368450335" duration="1126000" />
     </task>
     <servers />
   </component>

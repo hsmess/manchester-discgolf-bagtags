@@ -41,6 +41,7 @@ class EmailTagPos extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+                    ->subject('Manchester Bagtags - Tag Assigned')
                     ->line('Welcome to the Manchester BagTag 2021 Season')
                     ->line('Tags have now been assigned, and your starting tag is: ' . $this->ctp)
                     ->line('If you selected shipping, this will be mailed tomorrow, and if not, you can collect your tag from the container by meeting anyone who has keys')
