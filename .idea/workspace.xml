@@ -165,14 +165,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/Pages" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/resources/js/Pages" />
+      <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/resources/js/Jetstream" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -212,7 +212,16 @@
       <workItem from="1616406537379" duration="1177000" />
       <workItem from="1617118560577" duration="14194000" />
       <workItem from="1617266434797" duration="2016000" />
-      <workItem from="1617368450335" duration="1126000" />
+      <workItem from="1617368450335" duration="2678000" />
+      <workItem from="1617447035252" duration="484000" />
+      <workItem from="1617879198232" duration="1122000" />
+      <workItem from="1618311169412" duration="398000" />
+      <workItem from="1618575649637" duration="433000" />
+      <workItem from="1619375052642" duration="359000" />
+      <workItem from="1620639748776" duration="322000" />
+      <workItem from="1620644452118" duration="953000" />
+      <workItem from="1621592145309" duration="887000" />
+      <workItem from="1621620834917" duration="941000" />
     </task>
     <servers />
   </component>

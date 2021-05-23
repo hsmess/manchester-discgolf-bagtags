@@ -19,12 +19,13 @@ use App\Http\Resources\User as UserResource;
 
 Route::get('/', function () {
     ray(Bagtag::all());
+    return Inertia::render('BRB');
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
-        'tags' => BagtagResource::collection(Bagtag::all()),
+        'tags' => BagtagResource::collection(Bagtag::all()->sortBy('tag_number')),
         'users' => UserResource::collection(\App\Models\User::where('paid_2021',true)->get()->sortBy('name'))
     ]);
 });
