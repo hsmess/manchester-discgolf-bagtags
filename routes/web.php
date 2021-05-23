@@ -29,6 +29,18 @@ Route::get('/', function () {
         'users' => UserResource::collection(\App\Models\User::where('paid_2021',true)->get()->sortBy('name'))
     ]);
 });
+
+Route::get('/tmp', function () {
+//    return Inertia::render('BRB');
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+        'tags' => BagtagResource::collection(Bagtag::all()->sortBy('tag_number')),
+        'users' => UserResource::collection(\App\Models\User::where('paid_2021',true)->get()->sortBy('name'))
+    ]);
+});
 //Route::redirect('/','/register');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
