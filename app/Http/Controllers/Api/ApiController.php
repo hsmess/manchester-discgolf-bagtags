@@ -146,8 +146,8 @@ class ApiController extends Controller
 //        $bagtag->currently_unassigned = false;
         $bagtag->save();
         return [
-            'tags' => Bagtag::collection(\App\Models\Bagtag::all()),
-            'users' => \App\Http\Resources\User::collection(\App\Models\User::where('paid_2021',true)->get()->sortBy('name'))
+            'tags' => Bagtag::collection(\App\Models\Bagtag::where('year',2022)->get()),
+            'users' => \App\Http\Resources\User::collection(\App\Models\User::where('paid_2022',true)->get()->sortBy('name'))
         ];
     }
 }

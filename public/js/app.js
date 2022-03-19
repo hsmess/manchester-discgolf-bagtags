@@ -4843,9 +4843,34 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Layout: _Layouts_Layout__WEBPACK_IMPORTED_MODULE_0__.default
   },
+  data: function data() {
+    return {
+      actual_tag: null,
+      actual_users: null,
+      new_user: null
+    };
+  },
+  props: {
+    tag: Object,
+    users: Object
+  },
+  mounted: function mounted() {
+    this.actual_tag = this.$props.tag;
+    this.actual_users = this.$props.users;
+  },
   computed: {
     user: function user() {
       return this.$page.props.user;
+    }
+  },
+  methods: {
+    processUpdateTag: function processUpdateTag() {
+      var self = this;
+      axios.post('/api/tag/' + self.actual_tag.data.id + '/update', {
+        'new_user_id': self.new_user
+      }).then(function (response) {
+        window.location.href = '/';
+      });
     }
   }
 });
@@ -35604,30 +35629,17 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left"
+                  staticClass:
+                    "mt-3 pt-2 pb-3 text-center sm:mt-0 sm:ml-4 sm:text-left"
                 },
                 [
-                  _c(
-                    "h3",
-                    {
-                      staticClass:
-                        "text-lg leading-6 font-medium text-gray-900",
-                      attrs: { id: "modal-title" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                       Update Tag Owner\n                   "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
                   _c("div", { staticClass: "mt-2" }, [
                     _c("p", { staticClass: "text-sm text-gray-500" }, [
                       _vm._v(
                         "\n                           Select who just won tag number " +
-                          _vm._s(_vm.tag.tag_number) +
+                          _vm._s(_vm.actual_tag.data.tag_number) +
                           " from " +
-                          _vm._s(_vm.tag.owner) +
+                          _vm._s(_vm.actual_tag.data.owner) +
                           "...\n                       "
                       )
                     ]),
@@ -35671,7 +35683,7 @@ var render = function() {
                               [_vm._v("-")]
                             ),
                             _vm._v(" "),
-                            _vm._l(_vm.parsed_users, function(user) {
+                            _vm._l(_vm.users.data, function(user) {
                               return _c(
                                 "option",
                                 { domProps: { value: user.id } },
@@ -35685,6 +35697,21 @@ var render = function() {
                     ])
                   ])
                 ]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "w-full mb-3 inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-yellow-500 text-base font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 sm:ml-3 sm:w-auto sm:text-sm",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.processUpdateTag()
+                    }
+                  }
+                },
+                [_vm._v("\n                    Update Tag\n                ")]
               )
             ]
           )

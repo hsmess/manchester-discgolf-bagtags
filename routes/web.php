@@ -46,8 +46,11 @@ Route::get('/2021', function () {
 Route::get('/update-tag',function (Request $request){
     if($request->year == 2022)
     {
+        $tag = Bagtag::where('tag_number',$request->tag)->where('year',2022)->get();
+
+
         return Inertia::render('ChangeTagTwentyTwo',[
-            'tag' => Bagtag::where('tag_number',$request->tag)->where('year',2022)->firstOrFail(),
+            'tag' => BagtagResource::collection($tag)->first(),
             'users' => UserResource::collection(\App\Models\User::where('paid_2022',true)->get()->sortBy('name'))
         ]);
     }
