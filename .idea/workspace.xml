@@ -103,7 +103,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
@@ -112,7 +111,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
@@ -153,6 +151,14 @@
       <path value="$PROJECT_DIR$/vendor/zbateson/mail-mime-parser" />
       <path value="$PROJECT_DIR$/vendor/zbateson/stream-decorators" />
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/league/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
     </include_path>
   </component>
   <component name="ProjectId" id="1oRUL5zwETkJXMu93nkcyuskwXt" />
@@ -222,6 +228,17 @@
       <workItem from="1620644452118" duration="953000" />
       <workItem from="1621592145309" duration="887000" />
       <workItem from="1621620834917" duration="1793000" />
+      <workItem from="1622188375456" duration="709000" />
+      <workItem from="1632920803287" duration="628000" />
+      <workItem from="1646408101989" duration="1564000" />
+      <workItem from="1646902688860" duration="1362000" />
+      <workItem from="1647361320403" duration="1830000" />
+      <workItem from="1647417710760" duration="1362000" />
+      <workItem from="1647421978658" duration="2361000" />
+      <workItem from="1647438728372" duration="4569000" />
+      <workItem from="1647507252558" duration="475000" />
+      <workItem from="1647508918097" duration="538000" />
+      <workItem from="1647720383965" duration="2244000" />
     </task>
     <servers />
   </component>

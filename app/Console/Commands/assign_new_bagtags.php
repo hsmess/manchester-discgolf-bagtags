@@ -41,9 +41,9 @@ class assign_new_bagtags extends Command
      */
     public function handle()
     {
-        $start_tag = Bagtag::latest()->first()->tag_number + 1;
+        $start_tag = Bagtag::where('year',2022)->orderByDesc('created_at')->first()->tag_number + 1;
 
-        $users = \App\Models\User::where('paid_2021',true)->get()->filter(function ($item) {
+        $users = \App\Models\User::where('paid_2022',true)->get()->filter(function ($item) {
             return $item->current_tag_position == "Unassigned";
         })->each(function ($item) use (&$start_tag){
             $t = new Bagtag();

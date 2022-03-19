@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="bg-yellow-400">
+        <nav class="bg-rose-400">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
@@ -12,22 +12,22 @@
                         </div>
                         <!--                        <div class="hidden md:block">-->
                         <!--                            <div class="ml-10 flex items-baseline space-x-4">-->
-                        <!--                                &lt;!&ndash; Current: "bg-yellow-500 text-white", Default: "text-white hover:bg-yellow-500 hover:bg-opacity-75" &ndash;&gt;-->
-                        <!--                                <a href="#" class="bg-yellow-500 text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>-->
+                        <!--                                &lt;!&ndash; Current: "bg-rose-500 text-white", Default: "text-white hover:bg-rose-500 hover:bg-opacity-75" &ndash;&gt;-->
+                        <!--                                <a href="#" class="bg-rose-500 text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>-->
 
-                        <!--                                <a href="#" class="text-white hover:bg-yellow-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Team</a>-->
+                        <!--                                <a href="#" class="text-white hover:bg-rose-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Team</a>-->
 
-                        <!--                                <a href="#" class="text-white hover:bg-yellow-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Projects</a>-->
+                        <!--                                <a href="#" class="text-white hover:bg-rose-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Projects</a>-->
 
-                        <!--                                <a href="#" class="text-white hover:bg-yellow-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Calendar</a>-->
+                        <!--                                <a href="#" class="text-white hover:bg-rose-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Calendar</a>-->
 
-                        <!--                                <a href="#" class="text-white hover:bg-yellow-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Reports</a>-->
+                        <!--                                <a href="#" class="text-white hover:bg-rose-500 hover:bg-opacity-75 px-3 py-2 rounded-md text-sm font-medium">Reports</a>-->
                         <!--                            </div>-->
                         <!--                        </div>-->
                     </div>
                     <div class="hidden md:block" v-if="user != null">
                         <div class="ml-4 flex items-center md:ml-6">
-                            <button class="p-1 bg-yellow-400 rounded-full text-yellow-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white">
+                            <button class="p-1 bg-rose-400 rounded-full text-rose-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-400 focus:ring-white">
                                 <span class="sr-only">View notifications</span>
                                 <!-- Heroicon name: outline/bell -->
                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -38,7 +38,7 @@
                             <!-- Profile dropdown -->
                             <div class="ml-3 relative">
                                 <div>
-                                    <button class="max-w-xs bg-yellow-400 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white" id="user-menu" aria-haspopup="true"  @click="showMenu = !showMenu">
+                                    <button class="max-w-xs bg-rose-400 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-400 focus:ring-white" id="user-menu" aria-haspopup="true"  @click="showMenu = !showMenu">
                                         <span class="sr-only">Open user menu</span>
                                         <img class="h-8 w-8 rounded-full" :src="profilepicture" alt="">
                                     </button>
@@ -72,14 +72,14 @@
                             <inertia-link href="/login" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                                 Sign in
                             </inertia-link>
-                            <inertia-link href="/register" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-yellow-400 bg-gray-600 hover:bg-gray-800">
+                            <inertia-link href="/register" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-500 bg-gray-600 hover:bg-gray-800">
                                 Sign up
                             </inertia-link>
                         </div>
                     </div>
                     <div class="-mr-2 flex md:hidden">
                         <!-- Mobile menu button -->
-                        <button type="button" class="bg-yellow-400 inline-flex items-center justify-center p-2 rounded-md text-yellow-200 hover:text-white hover:bg-yellow-500 hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" @click="showMenu = !showMenu">
+                        <button type="button" class="bg-rose-400 inline-flex items-center justify-center p-2 rounded-md text-rose-200 hover:text-white hover:bg-rose-500 hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-400 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" @click="showMenu = !showMenu">
                             <span class="sr-only">Open main menu</span>
                             <!--
                               Heroicon name: outline/menu
@@ -115,18 +115,18 @@
 
                 <div v-show="showMenu" class="md:hidden" id="mobile-menu">
                     <!--                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">-->
-                    <!--                    &lt;!&ndash; Current: "bg-yellow-500 text-white", Default: "text-white hover:bg-yellow-500 hover:bg-opacity-75" &ndash;&gt;-->
-                    <!--                    <a href="#" class="bg-yellow-500 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>-->
+                    <!--                    &lt;!&ndash; Current: "bg-rose-500 text-white", Default: "text-white hover:bg-rose-500 hover:bg-opacity-75" &ndash;&gt;-->
+                    <!--                    <a href="#" class="bg-rose-500 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>-->
 
-                    <!--                    <a href="#" class="text-white hover:bg-yellow-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Team</a>-->
+                    <!--                    <a href="#" class="text-white hover:bg-rose-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Team</a>-->
 
-                    <!--                    <a href="#" class="text-white hover:bg-yellow-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Projects</a>-->
+                    <!--                    <a href="#" class="text-white hover:bg-rose-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Projects</a>-->
 
-                    <!--                    <a href="#" class="text-white hover:bg-yellow-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Calendar</a>-->
+                    <!--                    <a href="#" class="text-white hover:bg-rose-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Calendar</a>-->
 
-                    <!--                    <a href="#" class="text-white hover:bg-yellow-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Reports</a>-->
+                    <!--                    <a href="#" class="text-white hover:bg-rose-500 hover:bg-opacity-75 block px-3 py-2 rounded-md text-base font-medium">Reports</a>-->
                     <!--                </div>-->
-                    <div class="pt-4 pb-3 border-t border-yellow-500">
+                    <div class="pt-4 pb-3 border-t border-rose-500">
                         <div class="flex items-center px-5" v-if="user != null">
                             <div class="flex-shrink-0">
                                 <img class="h-10 w-10 rounded-full" :src="profilepicture" alt="">
@@ -135,7 +135,7 @@
                                 <div class="text-base font-medium text-white">{{ user.name }}</div>
                                 <div class="text-sm font-medium text-gray-200">{{ user.email }}</div>
                             </div>
-                            <button class="ml-auto bg-yellow-400 flex-shrink-0 p-1 rounded-full text-yellow-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white">
+                            <button class="ml-auto bg-rose-400 flex-shrink-0 p-1 rounded-full text-rose-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-400 focus:ring-white">
                                 <span class="sr-only">View notifications</span>
                                 <!-- Heroicon name: outline/bell -->
                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -144,19 +144,19 @@
                             </button>
                         </div>
                         <div class="mt-3 px-2 space-y-1" v-if="user != null" >
-                            <a href="/dashboard" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-yellow-500 hover:bg-opacity-75">Your Profile</a>
+                            <a href="/dashboard" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-rose-500 hover:bg-opacity-75">Your Profile</a>
 
-<!--                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-yellow-500 hover:bg-opacity-75">Settings</a>-->
+<!--                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-rose-500 hover:bg-opacity-75">Settings</a>-->
 
-                            <a href="#" @click="logout()" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-yellow-500 hover:bg-opacity-75">Sign out</a>
+                            <a href="#" @click="logout()" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-rose-500 hover:bg-opacity-75">Sign out</a>
                         </div>
                         <div class="mt-6" v-if="user == null">
-                            <inertia-link href="/register" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-yellow-400 bg-gray-600 hover:bg-gray-700">
+                            <inertia-link href="/register" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-500 bg-gray-600 hover:bg-gray-700">
                                 Sign up
                             </inertia-link>
                             <p class="mt-6 text-center text-base font-medium text-gray-500">
                                 Existing customer?
-                                <inertia-link href="/login" class="text-yellow-600 hover:text-yellow-500">
+                                <inertia-link href="/login" class="text-rose-600 hover:text-rose-500">
                                     Sign in
                                 </inertia-link>
                             </p>

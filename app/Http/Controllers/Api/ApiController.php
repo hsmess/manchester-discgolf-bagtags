@@ -77,7 +77,7 @@ class ApiController extends Controller
             'metadata' => [
                 'name' => $user->name,
                 'email' => $user->email,
-                'source' => 'bagtag-app'
+                'source' => 'bagtag-app-2022'
             ]
         ]);
         $tagOrder->payment_intent_id = $payment_intent->id;
@@ -125,7 +125,7 @@ class ApiController extends Controller
             $payment->fee = $balance_transaction->fee;
             $payment->amount = $payment_intent->amount;
             $payment->save();
-            $to->user->paid_2021 = true;
+            $to->user->paid_2022 = true;
             $to->user->save();
         }
         catch (\Exception $e){

@@ -40,7 +40,7 @@
                         </div>
                     </a>
                     <div class="mt-3 flex items-center text-sm font-semibold text-yellow-700" v-else>
-                        <div>Tags begin 01/04/2021</div>
+                        <div>Tags begin 28/03/2022</div>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         </div>
                     </a>
                     <div class="mt-3 flex items-center text-sm font-semibold text-yellow-700" v-else>
-                        <div>Tags begin 01/04/2021</div>
+                        <div>Tags begin 28/03/2022</div>
                     </div>
                 </div>
             </div>

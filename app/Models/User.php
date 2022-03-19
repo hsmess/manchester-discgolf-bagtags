@@ -79,7 +79,7 @@ class User extends Authenticatable implements MustVerifyEmail
         }
     }
     public function getDonationAmountAttribute(){
-        $payment = $this->payments->first();
+        $payment = $this->payments->latest();
         if($payment === null)
         {
             return 0;

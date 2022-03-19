@@ -41,11 +41,11 @@ class assign_paid_users_tags extends Command
      */
     public function handle()
     {
-        $players = User::where('paid_2021',true)->get()->sortByDesc(function ($item){
+        $players = User::where('paid_2022',true)->get()->sortByDesc(function ($item){
             return $item->donation_amount;
         });
         //check if we already have tags for some reason...
-        $first = DB::table('bagtags')->latest('created_at')->first();
+        $first = DB::table('bagtags')->where('year',2022)->orderByDesc('created_at')->first();
         if($first != null)
         {
             $initial_tag = $first['tag_number'] + 1;
@@ -56,6 +56,7 @@ class assign_paid_users_tags extends Command
         $players->each(function ($item) use (&$initial_tag){
             $t = new Bagtag();
             $t->tag_number = $initial_tag;
+            $t->year = 2022;
             $t->save();
             $initial_tag++;
             $item->bagtags()->attach($t);

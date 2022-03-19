@@ -6,11 +6,11 @@
             </div>
 
             <div class="mt-8 text-2xl">
-                Get your 2021 BagTag now
+                Get your 2022 BagTag now
             </div>
 
             <div class="mt-6 text-gray-500">
-                This is the place where you can sign up for your 2021 BagTag. You can either have it shipped to you, or arrange for a socially distanced collection the next time you are at the course.
+                This is the place where you can sign up for your 2022 BagTag. You can either have it shipped to you, or arrange to collect it the next time you are at the course.
 
                 All users will sign up via the system, and your initial tag will be allocated by the size of donation you make to the Lilford campaign... So what are you waiting for!
 

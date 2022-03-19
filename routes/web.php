@@ -6,6 +6,8 @@ use Inertia\Inertia;
 use App\Models\Bagtag;
 use App\Http\Resources\Bagtag as BagtagResource;
 use App\Http\Resources\User as UserResource;
+use App\Http\Controllers\AssignController;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +18,20 @@ use App\Http\Resources\User as UserResource;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function (){
+    return Inertia::render('TwentyTwentyTwo', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+        'tags' => BagtagResource::collection(Bagtag::where('year',2022)->get()->sortBy('tag_number')),
+        'users' => UserResource::collection(\App\Models\User::where('paid_2022',true)->get()->sortBy('name'))
+    ]);
+});
 
-Route::get('/', function () {
-    ray(Bagtag::all());
+
+
+Route::get('/2021', function () {
 //    return Inertia::render('BRB');
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -28,6 +41,16 @@ Route::get('/', function () {
         'tags' => BagtagResource::collection(Bagtag::all()->sortBy('tag_number')),
         'users' => UserResource::collection(\App\Models\User::where('paid_2021',true)->get()->sortBy('name'))
     ]);
+});
+
+Route::get('/update-tag',function (Request $request){
+    if($request->year == 2022)
+    {
+        return Inertia::render('ChangeTagTwentyTwo',[
+            'tag' => Bagtag::where('tag_number',$request->tag)->where('year',2022)->firstOrFail(),
+            'users' => UserResource::collection(\App\Models\User::where('paid_2022',true)->get()->sortBy('name'))
+        ]);
+    }
 });
 
 //Route::get('/tmp', function () {
