@@ -40172,11 +40172,16 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                    No Tags here! Tags launch March 28th\n\n                                    Not yet signed up? Head over and "
+                                "\n                                    Tags will be allocated on March 28th\n\n                                    Not yet signed up? Head over and "
                               ),
-                              _c("a", { attrs: { href: "/register" } }, [
-                                _vm._v(" sign up now!")
-                              ])
+                              _c(
+                                "a",
+                                {
+                                  staticStyle: { color: "black" },
+                                  attrs: { href: "/register" }
+                                },
+                                [_vm._v(" sign up now!")]
+                              )
                             ]
                           )
                         ]

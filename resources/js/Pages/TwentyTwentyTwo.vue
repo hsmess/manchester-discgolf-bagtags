@@ -113,9 +113,9 @@
                            <div class="px-4 py-4 sm:px-6">
                                <div class="flex items-center justify-between">
                                    <p class="text-sm font-medium text-rose-600 truncate">
-                                       No Tags here! Tags launch March 28th
+                                       Tags will be allocated on March 28th
 
-                                       Not yet signed up? Head over and <a href="/register"> sign up now!</a>
+                                       Not yet signed up? Head over and <a style="color: black" href="/register"> sign up now!</a>
                                    </p>
                                </div>
                            </div>
