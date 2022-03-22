@@ -35839,7 +35839,7 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "py-12" }, [
         _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
-          _vm.user.paid_2021
+          _vm.user.paid_2022
             ? _c(
                 "div",
                 {
