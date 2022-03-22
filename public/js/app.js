@@ -6620,6 +6620,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     canLogin: Boolean,
@@ -28660,6 +28662,40 @@ component.options.__file = "resources/js/Pages/Profile/UpdateProfileInformationF
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Ric.vue":
+/*!************************************!*\
+  !*** ./resources/js/Pages/Ric.vue ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/Pages/Ric.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/TermsOfService.vue":
 /*!***********************************************!*\
   !*** ./resources/js/Pages/TermsOfService.vue ***!
@@ -28695,6 +28731,40 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/Pages/TermsOfService.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Thursday.vue":
+/*!*****************************************!*\
+  !*** ./resources/js/Pages/Thursday.vue ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/Pages/Thursday.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -40102,8 +40172,11 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                    No Tags here! Tags launch March 28th\n                                "
-                              )
+                                "\n                                    No Tags here! Tags launch March 28th\n\n                                    Not yet signed up? Head over and "
+                              ),
+                              _c("a", { attrs: { href: "/register" } }, [
+                                _vm._v(" sign up now!")
+                              ])
                             ]
                           )
                         ]
@@ -52782,8 +52855,12 @@ var map = {
 	"./Profile/UpdatePasswordForm.vue": "./resources/js/Pages/Profile/UpdatePasswordForm.vue",
 	"./Profile/UpdateProfileInformationForm": "./resources/js/Pages/Profile/UpdateProfileInformationForm.vue",
 	"./Profile/UpdateProfileInformationForm.vue": "./resources/js/Pages/Profile/UpdateProfileInformationForm.vue",
+	"./Ric": "./resources/js/Pages/Ric.vue",
+	"./Ric.vue": "./resources/js/Pages/Ric.vue",
 	"./TermsOfService": "./resources/js/Pages/TermsOfService.vue",
 	"./TermsOfService.vue": "./resources/js/Pages/TermsOfService.vue",
+	"./Thursday": "./resources/js/Pages/Thursday.vue",
+	"./Thursday.vue": "./resources/js/Pages/Thursday.vue",
 	"./TwentyTwentyTwo": "./resources/js/Pages/TwentyTwentyTwo.vue",
 	"./TwentyTwentyTwo.vue": "./resources/js/Pages/TwentyTwentyTwo.vue",
 	"./Welcome": "./resources/js/Pages/Welcome.vue",
@@ -52869,7 +52946,9 @@ var map = {
 	"./Pages/Profile/TwoFactorAuthenticationForm.vue": "./resources/js/Pages/Profile/TwoFactorAuthenticationForm.vue",
 	"./Pages/Profile/UpdatePasswordForm.vue": "./resources/js/Pages/Profile/UpdatePasswordForm.vue",
 	"./Pages/Profile/UpdateProfileInformationForm.vue": "./resources/js/Pages/Profile/UpdateProfileInformationForm.vue",
+	"./Pages/Ric.vue": "./resources/js/Pages/Ric.vue",
 	"./Pages/TermsOfService.vue": "./resources/js/Pages/TermsOfService.vue",
+	"./Pages/Thursday.vue": "./resources/js/Pages/Thursday.vue",
 	"./Pages/TwentyTwentyTwo.vue": "./resources/js/Pages/TwentyTwentyTwo.vue",
 	"./Pages/Welcome.vue": "./resources/js/Pages/Welcome.vue"
 };
