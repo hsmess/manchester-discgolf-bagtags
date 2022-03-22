@@ -40172,7 +40172,11 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                    Tags will be allocated on March 28th\n\n                                    Not yet signed up? Head over and "
+                                "\n                                    Tags will be allocated on March 28th\n                                     "
+                              ),
+                              _c("br"),
+                              _vm._v(
+                                "\n                                    Not yet signed up? Head over and "
                               ),
                               _c(
                                 "a",
