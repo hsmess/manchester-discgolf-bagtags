@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -70,6 +71,10 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(Address::class,'id','shipping_address_id');
     }
     public function getCurrentTagPositionAttribute(){
+        if(Carbon::now()->lt(Carbon::createFromDate(2022,28,03)))
+        {
+            return "Unassigned";
+        }
         $tag = $this->bagtags->sortByDesc('pivot.created_at')->first();
         if($tag != null){
             return $tag->tag_number;
