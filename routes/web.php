@@ -76,3 +76,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/buy', function () {
     return Inertia::render('Pay');
 })->name('buy');
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/thursday-night-league', function () {
+    return Inertia::render('Thursday');
+})->name('thursday');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/ric-taylor-memorial', function () {
+    return Inertia::render('Ric');
+})->name('rictourney');

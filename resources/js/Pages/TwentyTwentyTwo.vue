@@ -114,6 +114,8 @@
                                <div class="flex items-center justify-between">
                                    <p class="text-sm font-medium text-rose-600 truncate">
                                        No Tags here! Tags launch March 28th
+
+                                       Not yet signed up? Head over and <a href="/register"> sign up now!</a>
                                    </p>
                                </div>
                            </div>
