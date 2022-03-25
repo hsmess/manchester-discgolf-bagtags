@@ -183,6 +183,7 @@
       <recent name="$PROJECT_DIR$/resources/js/Jetstream" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/public" />
@@ -241,7 +242,7 @@
       <workItem from="1647508918097" duration="538000" />
       <workItem from="1647720383965" duration="8101000" />
       <workItem from="1647937610620" duration="3585000" />
-      <workItem from="1647960444591" duration="8975000" />
+      <workItem from="1647960444591" duration="21327000" />
     </task>
     <servers />
   </component>
