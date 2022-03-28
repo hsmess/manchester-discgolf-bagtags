@@ -47,7 +47,7 @@ class update_metadata extends Command
     public function handle()
     {
         $stripe = new \Stripe\StripeClient(
-            config('enums.stripe_key')
+            config('enums.stripe_secret')
         );
 
 
