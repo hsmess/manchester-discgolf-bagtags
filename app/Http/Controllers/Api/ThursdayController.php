@@ -64,7 +64,8 @@ class ThursdayController extends Controller
             'metadata' => [
                 'name' => $user->name,
                 'email' => $user->email,
-                'source' => 'thursday-night-league-2022'
+                'source' => 'thursday-night-league-2022',
+                'lilford' => $ticketOrder->donation
             ]
         ]);
         $ticketOrder->payment_intent_id = $payment_intent->id;

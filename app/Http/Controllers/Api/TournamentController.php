@@ -74,7 +74,8 @@ class TournamentController extends Controller
             'metadata' => [
                 'name' => $user->name,
                 'email' => $user->email,
-                'source' => 'tournament-registration-'.Str::slug($tournament->name)
+                'source' => 'tournament-registration-'.Str::slug($tournament->name),
+                'lilford' => $tournamentEntry->donation + 4
             ]
         ]);
         $tournamentEntry->payment_intent_id = $payment_intent->id;

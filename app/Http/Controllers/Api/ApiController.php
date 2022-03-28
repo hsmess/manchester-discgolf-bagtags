@@ -11,6 +11,7 @@ use App\Models\User;
 use App\PaymentRecord;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 use Stripe\Customer;
 use Stripe\Exception\ApiErrorException;
 use Stripe\PaymentIntent;
@@ -69,6 +70,8 @@ class ApiController extends Controller
         }
         $user->stripe_customer_token = $customer->id;
         $user->save();
+
+
         $payment_intent = PaymentIntent::create([
             'amount' => $tagOrder->amount,
             'currency' => 'gbp',
@@ -77,7 +80,8 @@ class ApiController extends Controller
             'metadata' => [
                 'name' => $user->name,
                 'email' => $user->email,
-                'source' => 'bagtag-app-2022'
+                'source' => 'bagtag-app-2022',
+                'donation' => $request->donation
             ]
         ]);
         $tagOrder->payment_intent_id = $payment_intent->id;
