@@ -41,13 +41,12 @@ class EmailTagPos extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('Manchester Bagtags - Tag Assigned')
-                    ->line('Welcome to the Manchester BagTag 2021 Season')
-                    ->line('Tags have now been assigned, and your starting tag is: ' . $this->ctp)
-                    ->line('If you selected shipping, this will be mailed tomorrow, and if not, you can collect your tag from the container by meeting anyone who has keys')
-                    ->line('Also, the new dashboard where the current tags are listed, and where you can update your tag when you trade is now available.')
-                    ->action('Check it out!', url('/'))
-                    ->line('Thanks for signing up, and making this our biggest "tags" year ever, already!');
+                    ->subject('Manchester Bagtags - Current Tag')
+                    ->line('This is an email reminder for your current (or newly assigned) bagtag for the 2022 season')
+                    ->line('Your current bagtag: ' . $this->ctp)
+                    ->line('If you physically have another tag than this in your possession, please click the button below and update your tag, or scan the QR code on your tag.')
+                    ->action('Update your tag!', url('/'))
+                    ->line('If you have no bagtag or this is the first time you are seeing this email, you can now collect it from any committee member at the course (after 01/04/2022). If you selected shipping your tag will be posted out to you shortly.');
     }
 
     /**

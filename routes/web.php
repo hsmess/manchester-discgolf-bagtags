@@ -1,6 +1,10 @@
 <?php
 
+use App\Models\User;
+use App\Notifications\EmailTagPos;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\Bagtag;
@@ -85,3 +89,54 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/thursday-night-league', f
 Route::middleware(['auth:sanctum', 'verified'])->get('/ric-taylor-memorial', function () {
     return Inertia::render('Ric');
 })->name('rictourney');
+
+Route::get('/admin/assign', function (){
+    $first = Bagtag::where('year',2022)->first();
+    if($first == null)
+    {
+        $players = User::where('paid_2022',true)->get()->sortByDesc(function ($item){
+            return $item->donation_amount;
+        });
+        //check if we already have tags for some reason...
+        $first = DB::table('bagtags')->where('year',2022)->orderByDesc('created_at')->first();
+        if($first != null)
+        {
+            $initial_tag = $first['tag_number'] + 1;
+        }
+        else{
+            $initial_tag = 1;
+        }
+        $players->each(function ($item) use (&$initial_tag){
+            $t = new Bagtag();
+            $t->tag_number = $initial_tag;
+            $t->year = 2022;
+            $t->save();
+            $initial_tag++;
+            $item->bagtags()->attach($t);
+            Log::info($item->name . ' Gets tag ' . $t->tag_number);
+        });
+    }
+    else{
+        $start_tag = Bagtag::where('year',2022)->orderByDesc('created_at')->first()->tag_number + 1;
+
+        $users = \App\Models\User::where('paid_2022',true)->get()->filter(function ($item) {
+            return $item->current_tag_position == "Unassigned";
+        })->each(function ($item) use (&$start_tag){
+            $t = new Bagtag();
+            $t->tag_number = $start_tag;
+            $t->save();
+            $start_tag++;
+            $item->bagtags()->attach($t);
+            Log::info($item->name . ' Gets tag ' . $t->tag_number);
+            $user = $item->fresh();
+            $user->notify(new EmailTagPos($user->current_tag_position));
+        });
+    }
+});
+
+Route::get('admin/qummec-duHboh-dexhy1/notify-everyone',function (){
+    User::where('paid_2022',true)->get()->each(function ($user){
+//        ray($user->current_tag_position);
+        $user->notify(new EmailTagPos($user->current_tag_position));
+    });
+});
