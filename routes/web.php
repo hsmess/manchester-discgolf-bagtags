@@ -117,13 +117,14 @@ Route::get('/admin/assign', function (){
         });
     }
     else{
-        $start_tag = Bagtag::where('year',2022)->orderByDesc('created_at')->first()->tag_number + 1;
+        $start_tag = Bagtag::where('year',2022)->orderByDesc('id')->first()->tag_number + 1;
 
         $users = \App\Models\User::where('paid_2022',true)->get()->filter(function ($item) {
             return $item->current_tag_position == "Unassigned";
         })->each(function ($item) use (&$start_tag){
             $t = new Bagtag();
             $t->tag_number = $start_tag;
+            $t->year = 2022;
             $t->save();
             $start_tag++;
             $item->bagtags()->attach($t);
