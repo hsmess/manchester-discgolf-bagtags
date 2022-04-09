@@ -142,5 +142,3 @@ Route::get('admin/qummec-duHboh-dexhy1/notify-everyone',function (){
     });
 });
 
-
-App\Models\User::where('paid_2022',true)->map(function ($item){return $item->currentTagPosition;});
