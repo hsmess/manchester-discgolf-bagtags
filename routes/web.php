@@ -141,3 +141,6 @@ Route::get('admin/qummec-duHboh-dexhy1/notify-everyone',function (){
         $user->notify(new EmailTagPos($user->current_tag_position));
     });
 });
+
+
+App\Models\User::where('paid_2022',true)->map(function ($item){return $item->currentTagPosition;});
