@@ -90,6 +90,27 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/ric-taylor-memorial', fun
     return Inertia::render('Ric');
 })->name('rictourney');
 
+
+
+Route::get('/mwo2', function () {
+    return Inertia::render('MWO2',[
+        'user' => \Illuminate\Support\Facades\Auth::user() ?? null
+    ]);
+})->name('mwo2');
+Route::get('/mwo2/register', function () {
+    return Inertia::render('MWO2Reg',[
+        'user' => \Illuminate\Support\Facades\Auth::user() ?? null
+    ]);
+})->name('mwo2reg');
+Route::get('/mwo2/info', function () {
+    return Inertia::render('MWO2Info',[
+        'user' => \Illuminate\Support\Facades\Auth::user() ?? null
+    ]);
+})->name('mwo2info');
+
+
+
+
 Route::get('/admin/assign', function (){
     $first = Bagtag::where('year',2022)->first();
     if($first == null)

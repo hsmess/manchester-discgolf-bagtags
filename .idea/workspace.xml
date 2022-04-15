@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c651e129-bada-49a4-bf55-6e6182511aa6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/MWO2.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/MWO2Info.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/MWO2Reg.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,14 +178,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/Pages" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/resources/js/Pages" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/resources/js/Jetstream" />
     </key>
@@ -247,7 +252,9 @@
       <workItem from="1647960444591" duration="22721000" />
       <workItem from="1648483240097" duration="8002000" />
       <workItem from="1648644094862" duration="1189000" />
-      <workItem from="1649494201710" duration="271000" />
+      <workItem from="1649494201710" duration="903000" />
+      <workItem from="1649747461098" duration="4855000" />
+      <workItem from="1650019534412" duration="2508000" />
     </task>
     <servers />
   </component>
