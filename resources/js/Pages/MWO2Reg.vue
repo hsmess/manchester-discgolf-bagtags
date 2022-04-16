@@ -5,382 +5,151 @@
 <!--            Hello-->
 <!--        </h2>-->
         <main class="lg:relative">
-            <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
-                <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                        <span class="block xl:inline">Manchester Wide Open II</span>
-                    </h1>
-                    <h1 class="text-2xl tracking-tight font-extrabold text-rose-900 sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl">
-                        <span class="block xl:inline">Presented by Ace Disc Golf</span>
-                    </h1>
-                    <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">Join Manchester Disc Golf Club and Don't Shoot on <strong>02/03 July 2022</strong> for a two-day tournament across <strong>Longford</strong> and <strong>Lilford</strong> parks, stop #4 of 5 on the BDGA Am Tour. </p>
-                    <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
-                        <div class="rounded-md shadow">
-                            <a href="/mwo2/info" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Read Tournament Info </a>
+            <form class="space-y-6" action="/mwo2" method="POST">
+                <input type="hidden" name="_token" :value="csrf">
+            <div class="space-y-6">
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-6">
+                        <div class="md:col-span-1">
+                            <h3 class="text-lg font-medium leading-6 text-gray-900">Registration</h3>
+                            <p class="mt-1 text-sm text-gray-500">Enter your details and sign up for the event</p>
                         </div>
-                        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                            <a href="/mwo2/register" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"> Sign Up Now </a>
+                        <div class="mt-5 md:mt-0 md:col-span-2">
+                                <div class="grid grid-cols-3 gap-6">
+                                    <div class="col-span-3 sm:col-span-2">
+                                        <label for="name" class="block text-sm font-medium text-gray-700"> Name </label>
+                                        <div class="mt-1 flex rounded-md shadow-sm">
+                                            <input type="text" name="name" id="name" class="focus:ring-rose-500 focus:border-rose-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Paul McBeth">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-6">
+                                    <div class="col-span-3 sm:col-span-2">
+                                        <label for="pdga" class="block text-sm font-medium text-gray-700"> PDGA Number (optional) </label>
+                                        <div class="mt-1 flex rounded-md shadow-sm">
+                                            <input type="text" name="pdga" id="pdga" class="focus:ring-rose-500 focus:border-rose-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="27523">
+                                        </div>
+                                        <p class="mt-2 text-sm text-gray-500">Required to get round ratings. Want to get a PDGA Number? <a class="relative cursor-pointer bg-white rounded-md font-medium text-rose-600 hover:text-rose-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-rose-500" href="https://www.pdga.com/membership/select">Sign up here!</a></p>
+                                    </div>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">This tournament is on the BDGA Am Tour. To earn points towards your season finale, or qualify for the British Championships you need to be a Full BDGA member. <a class="relative cursor-pointer bg-white rounded-md font-medium text-rose-600 hover:text-rose-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-rose-500" href="https://bdga.org.uk/shop/full-membership/">Sign up here!</a></p>
+
+                                <div>
+                                    <label for="comments" class="block text-sm font-medium text-gray-700"> Comments/Notes </label>
+                                    <div class="mt-1">
+                                        <textarea id="comments" name="comments" rows="3" class="shadow-sm focus:ring-rose-500 focus:border-rose-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Got any requests, questions or suggestions? Let me know!"></textarea>
+                                    </div>
+<!--                                    <p class="mt-2 text-sm text-gray-500">Brief description for your profile. URLs are hyperlinked.</p>-->
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="email-address" class="block text-sm font-medium text-gray-700">Email address</label>
+                                    <input type="text" name="email-address" id="email-address" autocomplete="email" class="mt-1 focus:ring-rose-500 focus:border-rose-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="paul@mcbeastmode.com">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="division" class="block text-sm font-medium text-gray-700">Division</label>
+                                    <select id="division" name="division" autocomplete="division-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm">
+                                        <option>MA1</option>
+                                        <option>MA2</option>
+                                        <option>MA3</option>
+                                        <option>MA4</option>
+                                        <option>FA1</option>
+                                        <option>FA2</option>
+                                        <option>FA3</option>
+                                        <option>FA4</option>
+                                    </select>
+                                    <p class="mt-2 text-sm text-gray-500">If this tournament doesn't sell out within a month, we will open masters divisions MA40, MA50, MA60, FA40, FA50, FA60. Masters player? Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!</p>
+
+                                </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-6">
+                        <div class="md:col-span-1">
+                            <h3 class="text-lg font-medium leading-6 text-gray-900">Select your options</h3>
+                            <p class="mt-1 text-sm text-gray-500">Customise your tournament experience!</p>
+                        </div>
+                        <div class="mt-5 md:mt-0 md:col-span-2">
+                                <div class="border-b-2 pb-2 pt-2">
+                                    <fieldset>
+                                        <div>
+                                            <legend class="text-base font-medium text-gray-900">Tournament Experience</legend>
+                                            <p class="text-sm text-gray-500">Our fundraiser VIP package includes access to bottles of water from HQ, the ability to pick one of your cardmates and a MWO2 Mug added to your players pack!</p>
+                                        </div>
+                                        <div class="mt-4 space-y-4">
+                                            <div class="flex items-center">
+                                                <input id="entry-regular" name="tournament-entry" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <label for="entry-regular" class="ml-3 block text-sm font-medium text-gray-700"> Standard entry (£35.00) </label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input id="entry-vip" name="tournament-entry" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <label for="entry-vip" class="ml-3 block text-sm font-medium text-gray-700"> VIP (£50.00) </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="border-b-2 pb-2 pt-2">
+                                    <fieldset>
+                                        <div>
+                                            <legend class="text-base font-medium text-gray-900">Ace Pot</legend>
+                                            <p class="text-sm text-gray-500">There's plenty of ace chances at both Longford and Lilford. Got to be in it to win it!</p>
+                                        </div>
+                                        <div class="mt-4 space-y-4">
+                                            <div class="flex items-center">
+                                                <input id="acepot-yes" name="ace-pot" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <label for="acepot-yes" class="ml-3 block text-sm font-medium text-gray-700"> Yes please (+£1.00) </label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input id="acepot-no" name="ace-pot" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <label for="acepot-no" class="ml-3 block text-sm font-medium text-gray-700"> No Thanks (+0.00) </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="border-b-2 pb-2 pt-2">
+                                    <fieldset>
+                                        <div>
+                                            <legend class="text-base font-medium text-gray-900">Transport needed?</legend>
+                                            <p class="text-sm text-gray-500">We will be organising return transport for those who need it to access Lilford on the Saturday. There may be a small cost required, please stay tuned. This is non-binding, we just want an idea of numbers</p>
+                                        </div>
+                                        <div class="mt-4 space-y-4">
+                                            <div class="flex items-center">
+                                                <input id="transport-yes" name="transport-needed" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <label for="transport-yes" class="ml-3 block text-sm font-medium text-gray-700"> Transport Needed (+£0.00) </label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input id="transport-no" name="transport-needed" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <label for="transport-no" class="ml-3 block text-sm font-medium text-gray-700"> Will make own way (+0.00) </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="border-b-2 pb-2 pt-2">
+                                    <div class="col-span-3 sm:col-span-2">
+                                        <label for="lilford-donation" class="block text-sm font-medium text-gray-700">Extra Lilford Donation? </label>
+                                        <p class="text-sm text-gray-500">Ever fancied seeing your name on a tournament tee sign? For this weekend you could... The 36 highest additional donations added here will get a little mention on a tee sign for one weekend only...</p>
+                                        <div class="mt-1 flex rounded-md shadow-sm">
+                                            <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm"> £</span>
+                                            <input type="number" min="5" max="10000" step="0.01" name="lilford-donation" id="lilford-donation" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="5.00">
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex justify-end">
+                    <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500" @click="window.location.back()">Cancel</button>
+                    <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-rose-300 hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500" @click="processAndPay">Calculate total and pay</button>
+                </div>
             </div>
-            <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-                <img class="absolute inset-0 w-full h-full object-cover" src="https://dontshootdg.s3.eu-west-2.amazonaws.com/PRESENTED+BY+(2).png" alt="">
-            </div>
+            </form>
         </main>
 
-
-<!--        <div class="py-5">-->
-<!--            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">-->
-<!--                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">-->
-<!--                    <div class="p-6 sm:px-20 bg-white border-b border-gray-200" v-show="paymentConfirmed === false">-->
-<!--                        <div class="mt-8">-->
-<!--                            <div class="lg:border-t lg:border-b lg:border-gray-200">-->
-<!--                                <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Progress">-->
-<!--                                    <ol class="rounded-md overflow-hidden lg:flex lg:border-l lg:border-r lg:border-gray-200 lg:rounded-none">-->
-<!--                                        <li class="relative overflow-hidden lg:flex-1">-->
-<!--                                            <div class="border border-gray-200 overflow-hidden border-b-0 rounded-t-md lg:border-0">-->
-<!--                                                &lt;!&ndash; Completed Step &ndash;&gt;-->
-<!--                                                <a href="#" @click="state = 1" class="group" v-show="state > 1">-->
-<!--                                                    <span class="absolute top-0 left-0 w-1 h-full bg-transparent group-hover:bg-gray-200 lg:w-full lg:h-1 lg:bottom-0 lg:top-auto" aria-hidden="true"></span>-->
-<!--                                                    <span class="px-6 py-5 flex items-start text-sm font-medium">-->
-<!--                                                      <span class="flex-shrink-0">-->
-<!--                                                        <span class="w-10 h-10 flex items-center justify-center bg-rose-400 rounded-full">-->
-<!--                                                          &lt;!&ndash; Heroicon name: solid/check &ndash;&gt;-->
-<!--                                                          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">-->
-<!--                                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />-->
-<!--                                                          </svg>-->
-<!--                                                        </span>-->
-<!--                                                      </span>-->
-<!--                                                      <span class="mt-0.5 ml-4 min-w-0 flex flex-col">-->
-<!--                                                        <span class="text-xs font-semibold tracking-wide uppercase">Enter your details</span>-->
-<!--                                                        <span class="text-sm font-medium text-gray-500">Register for the tournament</span>-->
-<!--                                                      </span>-->
-<!--                                                    </span>-->
-<!--                                                </a>-->
-<!--                                                <a href="#" @click="state = 1"  aria-current="step" v-show="state === 1">-->
-<!--                                                    <span class="absolute top-0 left-0 w-1 h-full bg-rose-400 lg:w-full lg:h-1 lg:bottom-0 lg:top-auto" aria-hidden="true"></span>-->
-<!--                                                    <span class="px-6 py-5 flex items-start text-sm font-medium lg:pl-9">-->
-<!--                                                      <span class="flex-shrink-0">-->
-<!--                                                        <span class="w-10 h-10 flex items-center justify-center border-2 border-rose-400 rounded-full">-->
-<!--                                                          <span class="text-rose-400">01</span>-->
-<!--                                                        </span>-->
-<!--                                                      </span>-->
-<!--                                                      <span class="mt-0.5 ml-4 min-w-0 flex flex-col">-->
-<!--                                                        <span class="text-xs font-semibold text-rose-400 tracking-wide uppercase">Enter your details</span>-->
-<!--                                                        <span class="text-sm font-medium text-gray-500">Register for the tournament</span>-->
-<!--                                                      </span>-->
-<!--                                                    </span>-->
-<!--                                                </a>-->
-<!--                                            </div>-->
-<!--                                        </li>-->
-<!--                                        <li class="relative overflow-hidden lg:flex-1">-->
-<!--                                            <div class="border border-gray-200 overflow-hidden border-b-0 rounded-t-md lg:border-0">-->
-<!--                                                &lt;!&ndash; Completed Step &ndash;&gt;-->
-<!--                                                <a href="#" @click="state = 2"  class="group" v-show="state > 2">-->
-<!--                                                    <span class="absolute top-0 left-0 w-1 h-full bg-transparent group-hover:bg-gray-200 lg:w-full lg:h-1 lg:bottom-0 lg:top-auto" aria-hidden="true"></span>-->
-<!--                                                    <span class="px-6 py-5 flex items-start text-sm font-medium">-->
-<!--                                                      <span class="flex-shrink-0">-->
-<!--                                                        <span class="w-10 h-10 flex items-center justify-center bg-rose-400 rounded-full">-->
-<!--                                                          &lt;!&ndash; Heroicon name: solid/check &ndash;&gt;-->
-<!--                                                          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">-->
-<!--                                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />-->
-<!--                                                          </svg>-->
-<!--                                                        </span>-->
-<!--                                                      </span>-->
-<!--                                                      <span class="mt-0.5 ml-4 min-w-0 flex flex-col">-->
-<!--                                                        <span class="text-xs font-semibold tracking-wide uppercase">Support Lilford Park</span>-->
-<!--                                                        <span class="text-sm font-medium text-gray-500">Contribute to our fundraiser</span>-->
-<!--                                                      </span>-->
-<!--                                                    </span>-->
-<!--                                                </a>-->
-<!--                                                <a href="#" @click="state = 2"  aria-current="step" v-show="state === 2">-->
-<!--                                                    <span class="absolute top-0 left-0 w-1 h-full bg-rose-400 lg:w-full lg:h-1 lg:bottom-0 lg:top-auto" aria-hidden="true"></span>-->
-<!--                                                    <span class="px-6 py-5 flex items-start text-sm font-medium lg:pl-9">-->
-<!--                                                      <span class="flex-shrink-0">-->
-<!--                                                        <span class="w-10 h-10 flex items-center justify-center border-2 border-rose-400 rounded-full">-->
-<!--                                                          <span class="text-rose-400">02</span>-->
-<!--                                                        </span>-->
-<!--                                                      </span>-->
-<!--                                                      <span class="mt-0.5 ml-4 min-w-0 flex flex-col">-->
-<!--                                                        <span class="text-xs font-semibold text-rose-400 tracking-wide uppercase">Support Lilford Park</span>-->
-<!--                                                        <span class="text-sm font-medium text-gray-500">Contribute to our fundraiser</span>-->
-<!--                                                      </span>-->
-<!--                                                    </span>-->
-<!--                                                </a>-->
-<!--                                                <a href="#" @click="state = 2" class="group" v-show="state === 1">-->
-<!--                                                    <span class="absolute top-0 left-0 w-1 h-full bg-transparent group-hover:bg-gray-200 lg:w-full lg:h-1 lg:bottom-0 lg:top-auto" aria-hidden="true"></span>-->
-<!--                                                    <span class="px-6 py-5 flex items-start text-sm font-medium lg:pl-9">-->
-<!--                                                      <span class="flex-shrink-0">-->
-<!--                                                        <span class="w-10 h-10 flex items-center justify-center border-2 border-gray-300 rounded-full">-->
-<!--                                                          <span class="text-gray-500">02</span>-->
-<!--                                                        </span>-->
-<!--                                                      </span>-->
-<!--                                                      <span class="mt-0.5 ml-4 min-w-0 flex flex-col">-->
-<!--                                                        <span class="text-xs font-semibold text-gray-500 tracking-wide uppercase">Support Lilford Park</span>-->
-<!--                                                        <span class="text-sm font-medium text-gray-500">Contribute to our fundraiser</span>-->
-<!--                                                      </span>-->
-<!--                                                    </span>-->
-<!--                                                </a>-->
-<!--                                            </div>-->
-<!--                                        </li>-->
-<!--                                        <li class="relative overflow-hidden lg:flex-1">-->
-<!--                                            <div class="border border-gray-200 overflow-hidden border-t-0 rounded-b-md lg:border-0">-->
-<!--                                                &lt;!&ndash; Upcoming Step &ndash;&gt;-->
-<!--                                                <a href="#" @click="state = 3"  aria-current="step" v-show="state === 3">-->
-<!--                                                    <span class="absolute top-0 left-0 w-1 h-full bg-rose-400 lg:w-full lg:h-1 lg:bottom-0 lg:top-auto" aria-hidden="true"></span>-->
-<!--                                                    <span class="px-6 py-5 flex items-start text-sm font-medium lg:pl-9">-->
-<!--                                                      <span class="flex-shrink-0">-->
-<!--                                                        <span class="w-10 h-10 flex items-center justify-center border-2 border-rose-400 rounded-full">-->
-<!--                                                          <span class="text-rose-400">03</span>-->
-<!--                                                        </span>-->
-<!--                                                      </span>-->
-<!--                                                      <span class="mt-0.5 ml-4 min-w-0 flex flex-col">-->
-<!--                                                        <span class="text-xs font-semibold text-rose-400 tracking-wide uppercase">Check Out</span>-->
-<!--                                                        <span class="text-sm font-medium text-gray-500">Complete your purchase</span>-->
-<!--                                                      </span>-->
-<!--                                                    </span>-->
-<!--                                                </a>-->
-<!--                                                <a href="#" @click="state = 3"  class="group" v-show="state < 3">-->
-<!--                                                    <span class="absolute top-0 left-0 w-1 h-full bg-transparent group-hover:bg-gray-200 lg:w-full lg:h-1 lg:bottom-0 lg:top-auto" aria-hidden="true"></span>-->
-<!--                                                    <span class="px-6 py-5 flex items-start text-sm font-medium lg:pl-9">-->
-<!--                                                      <span class="flex-shrink-0">-->
-<!--                                                        <span class="w-10 h-10 flex items-center justify-center border-2 border-gray-300 rounded-full">-->
-<!--                                                          <span class="text-gray-500">03</span>-->
-<!--                                                        </span>-->
-<!--                                                      </span>-->
-<!--                                                      <span class="mt-0.5 ml-4 min-w-0 flex flex-col">-->
-<!--                                                        <span class="text-xs font-semibold text-gray-500 tracking-wide uppercase">Check Out</span>-->
-<!--                                                        <span class="text-sm font-medium text-gray-500">Complete your purchase</span>-->
-<!--                                                      </span>-->
-<!--                                                    </span>-->
-<!--                                                </a>-->
-<!--                                            </div>-->
-<!--                                        </li>-->
-<!--                                    </ol>-->
-<!--                                </nav>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-<!--                        <div class="mt-6 text-gray-500" v-if="state === 1">-->
-
-<!--                            <div class="space-y-6">-->
-<!--                                <div class="bg-white overflow-hidden shadow rounded-lg">-->
-<!--                                    <div class="px-4 py-5 sm:px-6">-->
-<!--                                        Your Order-->
-<!--                                    </div>-->
-<!--                                    <div class="bg-gray-50 px-4 py-5 sm:p-6">-->
-<!--                                        <div> 1x Entry to Ric Taylor Memorial - <span class="text-gray-900 text-lg">£20.00</span></div>-->
-<!--                                        <div v-if="acepot != 0"> 1x Entry to Ric Taylor Memorial "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>-->
-<!--                                        <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>-->
-<!--                                        <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">-->
-<!--                                    <div class="md:grid md:grid-cols-3 md:gap-6">-->
-<!--                                        <div class="md:col-span-1">-->
-<!--                                            <h3 class="text-lg font-medium leading-6 text-gray-900">The Ric Taylor Memorial</h3>-->
-<!--                                            <p class="mt-1 text-sm text-gray-500">-->
-<!--                                                Last year Manchester Disc Golf lost a good friend, and so we have renamed our annual Spring one-day tournament in his memory.-->
-<!--                                                The Ric Taylor Memorial will be a 1-day PDGA sanctioned C-tier at our Longford Park course on April 16th 2022 and is a fundraiser for a charity chosen by his family.-->
-
-<!--                                                Entry will cost £20 per person for the day and will be comprised of:-->
-<!--                                            </p>-->
-<!--                                                <ul>-->
-<!--                                                    <li>Sanctioning & costs - £2</li>-->
-<!--                                                    <li>Prize fund - £5</li>-->
-<!--                                                    <li>Lilford Park Fundraiser - £4</li>-->
-<!--                                                    <li>Charity Donation - £9</li>-->
-<!--                                                </ul>-->
-<!--                                            <p class="mt-1 text-sm text-gray-500">-->
-<!--                                                We will play 1 round of Reds and 1 round of Blues for all players excluding FA4 and MA4 who will play two rounds of the Red course.-->
-<!--                                            </p>-->
-<!--                                        </div>-->
-<!--                                        <div class="mt-5 md:mt-0 md:col-span-2">-->
-<!--                                            <form class="space-y-6" action="#" method="POST">-->
-<!--                                                <fieldset>-->
-<!--                                                    <div class="col-span-6" style="max-width: 400px;">-->
-<!--                                                        <label for="first_name" class="block text-sm font-medium text-gray-700">First Name</label>-->
-<!--                                                        <input v-model="first_name" type="text" name="first_name" id="first_name" class="mt-1 focus:ring-rose-500 focus:border-rose-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">-->
-<!--                                                    </div>-->
-<!--                                                    <div class="col-span-6" style="max-width: 400px;">-->
-<!--                                                        <label for="last_name" class="block text-sm font-medium text-gray-700">Last Name</label>-->
-<!--                                                        <input v-model="last_name" type="text" name="last_name" id="last_name" class="mt-1 focus:ring-rose-500 focus:border-rose-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">-->
-<!--                                                    </div>-->
-<!--                                                    <div class="col-span-6" style="max-width: 200px;">-->
-<!--                                                        <label for="pdga_number" class="block text-sm font-medium text-gray-700">PDGA Number (optional)</label>-->
-<!--                                                        <input v-model="pdga_number" type="number" min="1" max="250000" name="pdga_number" id="pdga_number" class="mt-1 focus:ring-rose-500 focus:border-rose-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">-->
-<!--                                                    </div>-->
-<!--                                                    <div class="col-span-6" style="max-width: 200px;">-->
-<!--                                                        <label for="division" class="block text-sm font-medium text-gray-700">Division</label>-->
-<!--                                                        <select v-model="division" id="division" name="division" class="mt-1 block w-100 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm rounded-md">-->
-<!--                                                            <option :value="null" disabled selected>-</option>-->
-<!--                                                            <option value="MPO">MPO</option>-->
-<!--                                                            <option value="MA2">MA2</option>-->
-<!--                                                            <option value="MA3">MA3</option>-->
-<!--                                                            <option value="MA4">MA4</option>-->
-<!--                                                            <option value="FA2">FA2</option>-->
-<!--                                                            <option value="FA4">FA4</option>-->
-<!--                                                            <option value="MA40">MA40</option>-->
-<!--                                                            <option value="MA50">MA50</option>-->
-<!--                                                        </select>-->
-<!--                                                    </div>-->
-<!--                                                    <div>-->
-<!--                                                        <legend class="text-base font-medium text-gray-900">Ace Pot</legend>-->
-<!--                                                        <p class="text-sm text-gray-500">Please indicate if you will be paying into the Ace Pot. Cost is £1.00. Aces will be split and if not won will be donated to Ric's family's charity of choice</p>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="mt-4 space-y-4">-->
-<!--                                                        <div class="flex items-center">-->
-<!--                                                            <input id="yespls" :value="1" name="acepot" type="radio" v-model="acepot" class="focus:ring-rose-300 h-4 w-4 text-rose-400 border-gray-300">-->
-<!--                                                            <label for="yespls" class="ml-3 block text-sm font-medium text-gray-700">-->
-<!--                                                                Yes please-->
-<!--                                                            </label>-->
-<!--                                                        </div>-->
-<!--                                                        <div class="flex items-center">-->
-<!--                                                            <input id="noty" :value="0" name="acepot" type="radio" v-model="acepot" class="focus:ring-rose-300 h-4 w-4 text-rose-400 border-gray-300">-->
-<!--                                                            <label for="noty" class="ml-3 block text-sm font-medium text-gray-700">-->
-<!--                                                                No thanks-->
-<!--                                                            </label>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                </fieldset>-->
-<!--                                            </form>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="flex justify-end">-->
-<!--                                        <button @click="state = 2" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-rose-400 hover:bg-rose-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-400">-->
-<!--                                            Next-->
-<!--                                        </button>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
-<!--                        </div>-->
-<!--                        <div class="mt-6 text-gray-500" v-if="state === 2">-->
-<!--                            <div class="bg-white overflow-hidden shadow rounded-lg">-->
-<!--                                <div class="px-4 py-5 sm:px-6">-->
-<!--                                    Your Order-->
-<!--                                </div>-->
-<!--                                <div class="bg-gray-50 px-4 py-5 sm:p-6">-->
-<!--                                    <div class="bg-gray-50 px-4 py-5 sm:p-6">-->
-<!--                                        <div> 1x Entry to Ric Taylor Memorial - <span class="text-gray-900 text-lg">£20.00</span></div>-->
-<!--                                        <div v-if="acepot != 0"> 1x Entry to Ric Taylor Memorial "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>-->
-<!--                                        <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>-->
-<!--                                        <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <p class="mt-4 text-sm text-gray-900">-->
-<!--                                We are currently doing a fundraiser to support the installation of our new course in Lilford park, with the aim to put some baskets in by this summer.-->
-<!--                                Your <strong>initial</strong> tag will be allocated based on the amount you contribute to the fundraiser, so feel free to be generous.-->
-<!--                            </p>-->
-<!--                            &lt;!&ndash; This example requires Tailwind CSS v2.0+ &ndash;&gt;-->
-<!--                            <div>-->
-<!--                                <h2 class="text-gray-500 text-xs mt-5 font-medium uppercase tracking-wide">Donation Options</h2>-->
-<!--                                <ul class="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">-->
-<!--                                    <li @click="donation = 6" class="col-span-1 flex shadow-sm rounded-md">-->
-<!--                                        <div class="flex-shrink-0 flex items-center justify-center w-16 bg-rose-400 text-white text-sm font-medium rounded-l-md">-->
-<!--                                            £6.00-->
-<!--                                        </div>-->
-<!--                                        <div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">-->
-<!--                                            <div class="flex-1 px-4 py-2 text-sm truncate">-->
-<!--                                                <span class="text-gray-900 font-medium hover:text-gray-600">Suggested</span>-->
-<!--                                                <p class="text-gray-500">£6 .00</p>-->
-<!--                                            </div>-->
-<!--                                            <div class="flex-shrink-0 pr-2">-->
-<!--                                                <button class="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500">-->
-<!--                                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
-<!--                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />-->
-<!--                                                    </svg>-->
-<!--                                                </button>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                            <div class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200 mt-2">-->
-<!--                                <div class="w-full flex items-center justify-between p-6 space-x-6">-->
-<!--                                    <div class="flex-1 truncate">-->
-<!--                                        <label for="donation-amount" class="block text-sm font-medium text-gray-700">Donation</label>-->
-<!--                                        <div class="mt-1">-->
-<!--                                            <input type="number" ref="donation" v-model.number="donation" min="0" step="0.01" name="donation-amount" id="donation-amount" class="max-w-sm shadow-sm focus:ring-rose-500 focus:border-rose-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="£500" aria-describedby="donation-amount">-->
-<!--                                        </div>-->
-<!--                                        <p class="mt-2 text-sm text-gray-500" id="email-description">This will be added to your total cost.</p>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="flex justify-end pt-6">-->
-<!--                                <button @click="state = 1" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-rose-400 bg-gray-800 hover:bg-gray-700 focus:outlispone-none focus:ring-2 focus:ring-offset-2 focus:ring-grey-400">-->
-<!--                                    Back-->
-<!--                                </button>-->
-<!--                                <button @click="state = 3" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-rose-400 hover:bg-rose-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-400">-->
-<!--                                    Next-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="mt-6 text-gray-500" v-show="state === 3">-->
-<!--                            <div class="bg-white overflow-hidden shadow rounded-lg">-->
-<!--                                <div class="px-4 py-5 sm:px-6">-->
-<!--                                    Your Order-->
-<!--                                </div>-->
-<!--                                <div class="bg-gray-50 px-4 py-5 sm:p-6">-->
-<!--                                    <div class="bg-gray-50 px-4 py-5 sm:p-6">-->
-<!--                                        <div> 1x Entry to Ric Taylor Memorial - <span class="text-gray-900 text-lg">£20.00</span></div>-->
-<!--                                        <div v-if="acepot != 0"> 1x Entry to Ric Taylor Memorial "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>-->
-<!--                                        <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>-->
-<!--                                        <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="w-100">-->
-<!--                                <form id="payment-form" class="w-100">-->
-<!--                                    <div id="card-element" @change="change()">&lt;!&ndash;Stripe.js injects the Card Element&ndash;&gt;</div>-->
-<!--                                    <button id="submit" @click.prevent="pay()" :disabled="paymentInProgress === true">-->
-<!--                                        <div class="spinner" v-show="paymentInProgress === true" id="spinner"></div>-->
-<!--                                        <span id="button-text" v-show="paymentInProgress === false">Place Order</span>-->
-<!--                                    </button>-->
-<!--                                    <p id="card-error" role="alert"></p>-->
-<!--                                    &lt;!&ndash;                                    <p class="result-message d-none">&ndash;&gt;-->
-<!--                                    &lt;!&ndash;                                        Payment succeeded, see the result in your&ndash;&gt;-->
-<!--                                    &lt;!&ndash;                                        <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.&ndash;&gt;-->
-<!--                                    &lt;!&ndash;                                    </p>&ndash;&gt;-->
-<!--                                </form>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash;                                STRIPE CHECKOUT HERE&ndash;&gt;-->
-<!--                            <div class="flex justify-end pt-6">-->
-<!--                                <button @click="state = 1" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-rose-400 bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-grey-400">-->
-<!--                                    Back-->
-<!--                                </button>-->
-<!--                                <button @click="pay()" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-rose-400 hover:bg-rose-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-400">-->
-<!--                                    Pay-->
-<!--                                </button>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="p-6 sm:px-20 bg-white border-b border-gray-200" v-show="paymentConfirmed === true">-->
-<!--                        <div class="bg-white px-4 py-5 sm:px-6">-->
-<!--                            <div class="flex space-x-3">-->
-<!--                                <div class="flex-shrink-0">-->
-<!--                                    <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="">-->
-<!--                                </div>-->
-<!--                                <div class="min-w-0 flex-1">-->
-<!--                                    <p class="text-sm font-medium text-gray-900">-->
-<!--                                        <span >Thank You! Your order was recieved!</span>-->
-<!--                                    </p>-->
-<!--                                    <p class="text-sm text-gray-500">-->
-<!--                                        <span >£{{totalCost}} paid on {{  new Date().toLocaleString() }}</span>-->
-<!--                                    </p>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
-<!--                            <a href="/dashboard" type="button" class="mt-3 ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-rose-400 hover:bg-rose-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-400">-->
-<!--                                Go To Your Dashboard-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
     </layout>
 </template>
 
@@ -498,6 +267,7 @@ export default {
     },
     data() {
         return {
+            csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
             state: 1,
             donation: 0,
             acepot: 0,

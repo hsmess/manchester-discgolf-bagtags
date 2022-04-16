@@ -97,6 +97,7 @@ Route::get('/mwo2', function () {
         'user' => \Illuminate\Support\Facades\Auth::user() ?? null
     ]);
 })->name('mwo2');
+Route::post('/mwo2',[\App\Http\Controllers\TournamentController::class,'mwo2']);
 Route::get('/mwo2/register', function () {
     return Inertia::render('MWO2Reg',[
         'user' => \Illuminate\Support\Facades\Auth::user() ?? null

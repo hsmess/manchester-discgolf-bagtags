@@ -23,6 +23,8 @@ use Stripe\Stripe;
 
 class TournamentController extends Controller
 {
+
+
     public function pay(Request $request){
 
         $user = User::find($request->user_id);

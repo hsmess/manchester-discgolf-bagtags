@@ -6223,237 +6223,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -6566,6 +6335,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
       state: 1,
       donation: 0,
       acepot: 0,
@@ -39709,110 +39479,537 @@ var render = function() {
   return _c("layout", [
     _c("main", { staticClass: "lg:relative" }, [
       _c(
-        "div",
+        "form",
         {
-          staticClass:
-            "mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left"
+          staticClass: "space-y-6",
+          attrs: { action: "/mwo2", method: "POST" }
         },
         [
-          _c("div", { staticClass: "px-4 lg:w-1/2 sm:px-8 xl:pr-16" }, [
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrf }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "space-y-6" }, [
             _c(
-              "h1",
-              {
-                staticClass:
-                  "text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
-              },
+              "div",
+              { staticClass: "bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6" },
               [
-                _c("span", { staticClass: "block xl:inline" }, [
-                  _vm._v("Manchester Wide Open II")
+                _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
+                  _c("div", { staticClass: "md:col-span-1" }, [
+                    _c(
+                      "h3",
+                      {
+                        staticClass:
+                          "text-lg font-medium leading-6 text-gray-900"
+                      },
+                      [_vm._v("Registration")]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "mt-1 text-sm text-gray-500" }, [
+                      _vm._v("Enter your details and sign up for the event")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                    _c("div", { staticClass: "grid grid-cols-3 gap-6" }, [
+                      _c("div", { staticClass: "col-span-3 sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium text-gray-700",
+                            attrs: { for: "name" }
+                          },
+                          [_vm._v(" Name ")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 flex rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-rose-500 focus:border-rose-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300",
+                              attrs: {
+                                type: "text",
+                                name: "name",
+                                id: "name",
+                                placeholder: "Paul McBeth"
+                              }
+                            })
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "grid grid-cols-3 gap-6" }, [
+                      _c("div", { staticClass: "col-span-3 sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium text-gray-700",
+                            attrs: { for: "pdga" }
+                          },
+                          [_vm._v(" PDGA Number (optional) ")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 flex rounded-md shadow-sm" },
+                          [
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-rose-500 focus:border-rose-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300",
+                              attrs: {
+                                type: "text",
+                                name: "pdga",
+                                id: "pdga",
+                                placeholder: "27523"
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "mt-2 text-sm text-gray-500" }, [
+                          _vm._v(
+                            "Required to get round ratings. Want to get a PDGA Number? "
+                          ),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "relative cursor-pointer bg-white rounded-md font-medium text-rose-600 hover:text-rose-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-rose-500",
+                              attrs: {
+                                href: "https://www.pdga.com/membership/select"
+                              }
+                            },
+                            [_vm._v("Sign up here!")]
+                          )
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "mt-2 text-sm text-gray-500" }, [
+                      _vm._v(
+                        "This tournament is on the BDGA Am Tour. To earn points towards your season finale, or qualify for the British Championships you need to be a Full BDGA member. "
+                      ),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "relative cursor-pointer bg-white rounded-md font-medium text-rose-600 hover:text-rose-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-rose-500",
+                          attrs: {
+                            href: "https://bdga.org.uk/shop/full-membership/"
+                          }
+                        },
+                        [_vm._v("Sign up here!")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "block text-sm font-medium text-gray-700",
+                          attrs: { for: "comments" }
+                        },
+                        [_vm._v(" Comments/Notes ")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-1" }, [
+                        _c("textarea", {
+                          staticClass:
+                            "shadow-sm focus:ring-rose-500 focus:border-rose-500 block w-full sm:text-sm border border-gray-300 rounded-md",
+                          attrs: {
+                            id: "comments",
+                            name: "comments",
+                            rows: "3",
+                            placeholder:
+                              "Got any requests, questions or suggestions? Let me know!"
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "block text-sm font-medium text-gray-700",
+                          attrs: { for: "email-address" }
+                        },
+                        [_vm._v("Email address")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass:
+                          "mt-1 focus:ring-rose-500 focus:border-rose-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md",
+                        attrs: {
+                          type: "text",
+                          name: "email-address",
+                          id: "email-address",
+                          autocomplete: "email",
+                          placeholder: "paul@mcbeastmode.com"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-span-6 sm:col-span-3" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "block text-sm font-medium text-gray-700",
+                          attrs: { for: "division" }
+                        },
+                        [_vm._v("Division")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm",
+                          attrs: {
+                            id: "division",
+                            name: "division",
+                            autocomplete: "division-name"
+                          }
+                        },
+                        [
+                          _c("option", [_vm._v("MA1")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("MA2")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("MA3")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("MA4")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("FA1")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("FA2")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("FA3")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("FA4")])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "mt-2 text-sm text-gray-500" }, [
+                        _vm._v(
+                          "If this tournament doesn't sell out within a month, we will open masters divisions MA40, MA50, MA60, FA40, FA50, FA60. Masters player? Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!"
+                        )
+                      ])
+                    ])
+                  ])
                 ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "h1",
-              {
-                staticClass:
-                  "text-2xl tracking-tight font-extrabold text-rose-900 sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl"
-              },
-              [
-                _c("span", { staticClass: "block xl:inline" }, [
-                  _vm._v("Presented by Ace Disc Golf")
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass:
-                  "mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl"
-              },
-              [
-                _vm._v("Join Manchester Disc Golf Club and Don't Shoot on "),
-                _c("strong", [_vm._v("02/03 July 2022")]),
-                _vm._v(" for a two-day tournament across "),
-                _c("strong", [_vm._v("Longford")]),
-                _vm._v(" and "),
-                _c("strong", [_vm._v("Lilford")]),
-                _vm._v(" parks, stop #4 of 5 on the BDGA Am Tour. ")
               ]
             ),
             _vm._v(" "),
             _c(
               "div",
-              {
-                staticClass: "mt-10 sm:flex sm:justify-center lg:justify-start"
-              },
+              { staticClass: "bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6" },
               [
-                _c("div", { staticClass: "rounded-md shadow" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10",
-                      attrs: { href: "/mwo2/info" }
-                    },
-                    [_vm._v(" Read Tournament Info ")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "mt-3 rounded-md shadow sm:mt-0 sm:ml-3" },
-                  [
+                _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
+                  _c("div", { staticClass: "md:col-span-1" }, [
                     _c(
-                      "a",
+                      "h3",
                       {
                         staticClass:
-                          "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10",
-                        attrs: { href: "/mwo2/register" }
+                          "text-lg font-medium leading-6 text-gray-900"
                       },
-                      [_vm._v(" Sign Up Now ")]
-                    )
-                  ]
-                )
+                      [_vm._v("Select your options")]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "mt-1 text-sm text-gray-500" }, [
+                      _vm._v("Customise your tournament experience!")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                    _c("div", { staticClass: "border-b-2 pb-2 pt-2" }, [
+                      _c("fieldset", [
+                        _c("div", [
+                          _c(
+                            "legend",
+                            {
+                              staticClass: "text-base font-medium text-gray-900"
+                            },
+                            [_vm._v("Tournament Experience")]
+                          ),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "text-sm text-gray-500" }, [
+                            _vm._v(
+                              "Our fundraiser VIP package includes access to bottles of water from HQ, the ability to pick one of your cardmates and a MWO2 Mug added to your players pack!"
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "mt-4 space-y-4" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
+                              attrs: {
+                                id: "entry-regular",
+                                name: "tournament-entry",
+                                type: "radio"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "ml-3 block text-sm font-medium text-gray-700",
+                                attrs: { for: "entry-regular" }
+                              },
+                              [_vm._v(" Standard entry (£35.00) ")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
+                              attrs: {
+                                id: "entry-vip",
+                                name: "tournament-entry",
+                                type: "radio"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "ml-3 block text-sm font-medium text-gray-700",
+                                attrs: { for: "entry-vip" }
+                              },
+                              [_vm._v(" VIP (£50.00) ")]
+                            )
+                          ])
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "border-b-2 pb-2 pt-2" }, [
+                      _c("fieldset", [
+                        _c("div", [
+                          _c(
+                            "legend",
+                            {
+                              staticClass: "text-base font-medium text-gray-900"
+                            },
+                            [_vm._v("Ace Pot")]
+                          ),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "text-sm text-gray-500" }, [
+                            _vm._v(
+                              "There's plenty of ace chances at both Longford and Lilford. Got to be in it to win it!"
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "mt-4 space-y-4" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
+                              attrs: {
+                                id: "acepot-yes",
+                                name: "ace-pot",
+                                type: "radio"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "ml-3 block text-sm font-medium text-gray-700",
+                                attrs: { for: "acepot-yes" }
+                              },
+                              [_vm._v(" Yes please (+£1.00) ")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
+                              attrs: {
+                                id: "acepot-no",
+                                name: "ace-pot",
+                                type: "radio"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "ml-3 block text-sm font-medium text-gray-700",
+                                attrs: { for: "acepot-no" }
+                              },
+                              [_vm._v(" No Thanks (+0.00) ")]
+                            )
+                          ])
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "border-b-2 pb-2 pt-2" }, [
+                      _c("fieldset", [
+                        _c("div", [
+                          _c(
+                            "legend",
+                            {
+                              staticClass: "text-base font-medium text-gray-900"
+                            },
+                            [_vm._v("Transport needed?")]
+                          ),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "text-sm text-gray-500" }, [
+                            _vm._v(
+                              "We will be organising return transport for those who need it to access Lilford on the Saturday. There may be a small cost required, please stay tuned. This is non-binding, we just want an idea of numbers"
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "mt-4 space-y-4" }, [
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
+                              attrs: {
+                                id: "transport-yes",
+                                name: "transport-needed",
+                                type: "radio"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "ml-3 block text-sm font-medium text-gray-700",
+                                attrs: { for: "transport-yes" }
+                              },
+                              [_vm._v(" Transport Needed (+£0.00) ")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "flex items-center" }, [
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
+                              attrs: {
+                                id: "transport-no",
+                                name: "transport-needed",
+                                type: "radio"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "ml-3 block text-sm font-medium text-gray-700",
+                                attrs: { for: "transport-no" }
+                              },
+                              [_vm._v(" Will make own way (+0.00) ")]
+                            )
+                          ])
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "border-b-2 pb-2 pt-2" }, [
+                      _c("div", { staticClass: "col-span-3 sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium text-gray-700",
+                            attrs: { for: "lilford-donation" }
+                          },
+                          [_vm._v("Extra Lilford Donation? ")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "text-sm text-gray-500" }, [
+                          _vm._v(
+                            "Ever fancied seeing your name on a tournament tee sign? For this weekend you could... The 36 highest additional donations added here will get a little mention on a tee sign for one weekend only..."
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "mt-1 flex rounded-md shadow-sm" },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm"
+                              },
+                              [_vm._v(" £")]
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass:
+                                "focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300",
+                              attrs: {
+                                type: "number",
+                                min: "5",
+                                max: "10000",
+                                step: "0.01",
+                                name: "lilford-donation",
+                                id: "lilford-donation",
+                                placeholder: "5.00"
+                              }
+                            })
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ])
               ]
-            )
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex justify-end" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.window.location.back()
+                    }
+                  }
+                },
+                [_vm._v("Cancel")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-rose-300 hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500",
+                  attrs: { type: "submit" },
+                  on: { click: _vm.processAndPay }
+                },
+                [_vm._v("Calculate total and pay")]
+              )
+            ])
           ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
-        },
-        [
-          _c("img", {
-            staticClass: "absolute inset-0 w-full h-full object-cover",
-            attrs: {
-              src:
-                "https://dontshootdg.s3.eu-west-2.amazonaws.com/PRESENTED+BY+(2).png",
-              alt: ""
-            }
-          })
         ]
       )
     ])
