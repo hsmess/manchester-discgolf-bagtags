@@ -39756,6 +39756,7 @@ var render = function() {
                                 "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
                               attrs: {
                                 id: "entry-regular",
+                                value: "standard",
                                 name: "tournament-entry",
                                 type: "radio"
                               }
@@ -39778,6 +39779,7 @@ var render = function() {
                                 "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
                               attrs: {
                                 id: "entry-vip",
+                                value: "vip",
                                 name: "tournament-entry",
                                 type: "radio"
                               }
@@ -39822,6 +39824,7 @@ var render = function() {
                                 "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
                               attrs: {
                                 id: "acepot-yes",
+                                value: "true",
                                 name: "ace-pot",
                                 type: "radio"
                               }
@@ -39844,6 +39847,7 @@ var render = function() {
                                 "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
                               attrs: {
                                 id: "acepot-no",
+                                value: "false",
                                 name: "ace-pot",
                                 type: "radio"
                               }
@@ -39888,6 +39892,7 @@ var render = function() {
                                 "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
                               attrs: {
                                 id: "transport-yes",
+                                value: "true",
                                 name: "transport-needed",
                                 type: "radio"
                               }
@@ -39910,6 +39915,7 @@ var render = function() {
                                 "focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300",
                               attrs: {
                                 id: "transport-no",
+                                value: "false",
                                 name: "transport-needed",
                                 type: "radio"
                               }

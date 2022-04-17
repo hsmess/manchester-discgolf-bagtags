@@ -81,11 +81,11 @@
                                         </div>
                                         <div class="mt-4 space-y-4">
                                             <div class="flex items-center">
-                                                <input id="entry-regular" name="tournament-entry" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <input id="entry-regular" value="standard" name="tournament-entry" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
                                                 <label for="entry-regular" class="ml-3 block text-sm font-medium text-gray-700"> Standard entry (£35.00) </label>
                                             </div>
                                             <div class="flex items-center">
-                                                <input id="entry-vip" name="tournament-entry" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <input id="entry-vip" value="vip" name="tournament-entry" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
                                                 <label for="entry-vip" class="ml-3 block text-sm font-medium text-gray-700"> VIP (£50.00) </label>
                                             </div>
                                         </div>
@@ -99,11 +99,11 @@
                                         </div>
                                         <div class="mt-4 space-y-4">
                                             <div class="flex items-center">
-                                                <input id="acepot-yes" name="ace-pot" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
-                                                <label for="acepot-yes" class="ml-3 block text-sm font-medium text-gray-700"> Yes please (+£1.00) </label>
+                                                <input id="acepot-yes" value="true" name="ace-pot" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <label for="acepot-yes"  class="ml-3 block text-sm font-medium text-gray-700"> Yes please (+£1.00) </label>
                                             </div>
                                             <div class="flex items-center">
-                                                <input id="acepot-no" name="ace-pot" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <input id="acepot-no" value="false" name="ace-pot" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
                                                 <label for="acepot-no" class="ml-3 block text-sm font-medium text-gray-700"> No Thanks (+0.00) </label>
                                             </div>
                                         </div>
@@ -117,11 +117,11 @@
                                         </div>
                                         <div class="mt-4 space-y-4">
                                             <div class="flex items-center">
-                                                <input id="transport-yes" name="transport-needed" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <input id="transport-yes" value="true" name="transport-needed" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
                                                 <label for="transport-yes" class="ml-3 block text-sm font-medium text-gray-700"> Transport Needed (+£0.00) </label>
                                             </div>
                                             <div class="flex items-center">
-                                                <input id="transport-no" name="transport-needed" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
+                                                <input id="transport-no" value="false" name="transport-needed" type="radio" class="focus:ring-rose-500 h-4 w-4 text-rose-600 border-gray-300">
                                                 <label for="transport-no" class="ml-3 block text-sm font-medium text-gray-700"> Will make own way (+0.00) </label>
                                             </div>
                                         </div>
