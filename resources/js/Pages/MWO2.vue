@@ -397,10 +397,10 @@ export default {
     },
     mounted(){
         console.log(this.user);
-        if(this.user.paid_2022)
-        {
-            window.location.href = '/dashboard';
-        }
+        // if(this.user.paid_2022)
+        // {
+        //     window.location.href = '/dashboard';
+        // }
     },
     watch: {
         // whenever question changes, this function will run

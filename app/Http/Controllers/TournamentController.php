@@ -100,6 +100,7 @@ class TournamentController extends Controller
         $mwo2->is_vip = $data['tournament-entry'] === 'standard' ? 0 : 1;
         $mwo2->total_price = $tournamentEntry->amount - ($tournamentEntry->donation + 10);
         $mwo2->transport_needed = $data['transport-needed'];
+        $mwo2->save();
 
         return Inertia::render('MWO2Pay',[
             'client_secret' => $payment_intent->client_secret,

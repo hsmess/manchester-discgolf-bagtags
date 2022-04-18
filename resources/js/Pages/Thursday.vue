@@ -349,7 +349,7 @@
             console.log(this.user);
             if(this.user.paid_2022)
             {
-                window.location.href = '/dashboard';
+                // window.location.href = '/dashboard';
             }
         },
         watch: {
