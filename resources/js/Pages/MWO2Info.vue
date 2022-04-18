@@ -40,7 +40,7 @@
                             <span class="block text-base text-center text-rose-600 font-semibold tracking-wide uppercase">02/03 July 2022 | Presented by Ace Disc Golf</span>
                             <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Manchester Wide Open II</span>
                         </h1>
-                        <p class="mt-8 text-xl text-gray-500 leading-8">Manchester's premiere Amateur tournament of the year is BACK, and this time even more "manchester wide" than ever. The tournament will, for the first time, be split across our two beautiful courses. </p>
+                        <p class="mt-8 text-xl text-gray-500 leading-8">Manchester's premiere Amateur tournament of the year is BACK, and this time even more "Manchester wide" than ever. The tournament will, for the first time, be split across our two beautiful courses. </p>
                         <figure>
                             <img class="w-full rounded-lg" src="https://dontshootdg.s3.eu-west-2.amazonaws.com/Untitled+design+(24).png" alt="" width="500" height="500">
                             <figcaption>Tournament artwork by Ben Hadley</figcaption>
