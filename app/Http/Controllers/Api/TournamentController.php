@@ -13,6 +13,7 @@ use App\Models\Tournament;
 use App\Models\TournamentEntry;
 use App\Models\TournamentPayment;
 use App\Models\User;
+use App\Notifications\NotifyOfMWO2Place;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -133,6 +134,10 @@ class TournamentController extends Controller
             //We have a big problem. Not able to retrieve data from the charge!
             Log::critical('Charge with no balance transaction?: ' . $e->getMessage());
             return ['error'=> 'No associated balance transaction'];
+        }
+        if($to->tournament_id === 2)
+        {
+            User::find($request->user_id)->notify(new NotifyOfMWO2Place());
         }
         return ['success'=>'Payment Approved!'];
     }

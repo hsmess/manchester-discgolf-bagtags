@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MWO2;
 use App\Models\Tournament;
 use App\Models\TournamentEntry;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+use Inertia\Inertia;
 use Stripe\Customer;
 use Stripe\Exception\ApiErrorException;
 use Stripe\PaymentIntent;
@@ -16,6 +18,7 @@ use Stripe\Stripe;
 class TournamentController extends Controller
 {
     public function mwo2(Request $request){
+
         $data = $request->all();
         $total = 0;
         if($data['tournament-entry'] === 'standard')
@@ -31,7 +34,7 @@ class TournamentController extends Controller
         }
         $total += $data['lilford-donation'];
 
-        $user = User::firstOrCreate(['email' => $data['email']],['name' => $data['name'],'password'=>bcrypt('discgolf1')]);
+        $user = User::firstOrCreate(['email' => $data['email-address']],['name' => $data['name'],'password'=>bcrypt('discgolf1')]);
         $user->save();
 
 
@@ -45,12 +48,12 @@ class TournamentController extends Controller
         $tournamentEntry->amount = ($total) * 100;
         $tournamentEntry->user_id = $user->id;
         $tournamentEntry->tournament_id = $tournament->id;
-        $tournamentEntry->acepot = $request->acepot;
-        $tournamentEntry->donation = $request->donation;
+        $tournamentEntry->acepot = $data['ace-pot'] == false ? 0 : 1;
+        $tournamentEntry->donation = $data['lilford-donation'] ?? 0;
         $tournamentEntry->first_name = explode(' ',$request->name)[0];
-        $tournamentEntry->last_name = explode(' ',$request->name)[1];
-        $tournamentEntry->division = $request->division;
-        $tournamentEntry->pdga_number = $request->pdga_number;
+        $tournamentEntry->last_name = explode(' ',$request->name)[1] ?? 'discgolf';
+        $tournamentEntry->division = $data['division'];
+        $tournamentEntry->pdga_number =  $data['pdga'];
         $customer = null;
         if($user->stripe_customer_token != null)
         {
@@ -91,11 +94,24 @@ class TournamentController extends Controller
         ]);
         $tournamentEntry->payment_intent_id = $payment_intent->id;
         $tournamentEntry->save();
+
+        $mwo2 = new MWO2();
+        $mwo2->tournament_entry_id = $tournamentEntry->id;
+        $mwo2->is_vip = $data['tournament-entry'] === 'standard' ? 0 : 1;
+        $mwo2->total_price = $tournamentEntry->amount - ($tournamentEntry->donation + 10);
+        $mwo2->transport_needed = $data['transport-needed'];
+
+        return Inertia::render('MWO2Pay',[
+            'client_secret' => $payment_intent->client_secret,
+            'price' => $tournamentEntry->amount,
+            'order_id' => $tournamentEntry->id,
+            'user_id' => $user->id
+        ]);
 //        ['client_secret' => $payment_intent->client_secret, 'price'=>$tournamentEntry->amount,'order_id'=>$tournamentEntry->id]
         //pass those 3 things to the view
         //render the box
         //confirm payment?
-        
+        //send email
     }
 
 }
