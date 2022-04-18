@@ -39630,7 +39630,7 @@ var render = function() {
             _vm._v(" "),
             _c("p", { staticClass: "mt-8 text-xl text-gray-500 leading-8" }, [
               _vm._v(
-                'Manchester\'s premiere Amateur tournament of the year is BACK, and this time even more "manchester wide" than ever. The tournament will, for the first time, be split across our two beautiful courses. '
+                'Manchester\'s premiere Amateur tournament of the year is BACK, and this time even more "Manchester wide" than ever. The tournament will, for the first time, be split across our two beautiful courses. '
               )
             ]),
             _vm._v(" "),
@@ -40566,11 +40566,11 @@ var render = function() {
                   attrs: { type: "button" },
                   on: {
                     click: function($event) {
-                      return _vm.window.location.back()
+                      return _vm.history.back()
                     }
                   }
                 },
-                [_vm._v("Cancel")]
+                [_vm._v("Back")]
               ),
               _vm._v(" "),
               _c(
