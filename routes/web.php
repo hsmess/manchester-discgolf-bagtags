@@ -25,12 +25,13 @@ use Illuminate\Http\Request;
 */
 Route::get('/pdga-export/{tournament}',function (\App\Models\Tournament  $tournament){
     $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject);
-    $csv->insertOne(['Name','Div','PDGA#']);
+    $csv->insertOne(['first_name','last_name','pdga_number','division']);
     TournamentEntry::with(['payment','user'])->where('tournament_id',$tournament->id)->whereHas('payment')->get()->each(function ($item) use ($csv){
         $csv->insertOne([
-            'Name' => $item->first_name . ' ' .$item->last_name ,
-            'Div' => $item->division,
-            'PDGA#' => $item->pdga_number,
+            'first_name' => $item->first_name,
+            'last_name' => $item->last_name,
+            'pdga_number' => $item->pdga_number,
+            'division' => $item->division
         ]);
     });
     return response((string) $csv, 200, [
