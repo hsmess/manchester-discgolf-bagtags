@@ -13,4 +13,12 @@ class TournamentEntry extends Model
     {
         return $this->hasOne(TournamentPayment::class,'tournament_entry_id','id');
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function tournament()
+    {
+        return $this->belongsTo(Tournament::class);
+    }
 }

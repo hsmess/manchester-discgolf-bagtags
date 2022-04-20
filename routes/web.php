@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\TournamentEntry;
 use App\Models\User;
 use App\Notifications\EmailTagPos;
 use Illuminate\Foundation\Application;
@@ -22,6 +23,26 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/pdga-export/{tournament}',function (\App\Models\Tournament  $tournament){
+    $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject);
+    $csv->insertOne(['first_name','last_name','pdga_number','division']);
+    TournamentEntry::with(['payment','user'])->where('tournament_id',$tournament->id)->whereHas('payment')->get()->each(function ($item) use ($csv){
+        $csv->insertOne([
+            'first_name' => $item->first_name,
+            'last_name' => $item->last_name,
+            'pdga_number' => $item->pdga_number,
+            'division' => $item->division
+        ]);
+    });
+    return response((string) $csv, 200, [
+        'Content-Type' => 'text/csv',
+        'Content-Transfer-Encoding' => 'binary',
+        'Content-Disposition' => 'attachment; filename="entries.csv"',
+    ]);
+});
+
+
+
 Route::get('/', function (){
     return Inertia::render('TwentyTwentyTwo', [
         'canLogin' => Route::has('login'),
