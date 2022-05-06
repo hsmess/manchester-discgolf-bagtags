@@ -13,6 +13,7 @@ use App\Models\Tournament;
 use App\Models\TournamentEntry;
 use App\Models\TournamentPayment;
 use App\Models\User;
+use App\Notifications\MastersConfirmation;
 use App\Notifications\NotifyOfMWO2Place;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -138,6 +139,10 @@ class TournamentController extends Controller
         if($to->tournament_id === 2)
         {
             User::find($request->user_id)->notify(new NotifyOfMWO2Place());
+        }
+        if($to->tournament_id === 3)
+        {
+            User::find($request->user_id)->notify(new MastersConfirmation());
         }
         return ['success'=>'Payment Approved!'];
     }

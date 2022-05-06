@@ -131,6 +131,37 @@ Route::get('/mwo2/info', function () {
 })->name('mwo2info');
 
 
+Route::get('/masters-2022', function () {
+    return Inertia::render('Masters',[
+        'user' => \Illuminate\Support\Facades\Auth::user() ?? null
+    ]);
+})->name('masters');
+
+Route::post('/masters-2022',[\App\Http\Controllers\TournamentController::class,'masters2022']);
+
+Route::get('/masters-2022/register', function () {
+    return Inertia::render('MastersReg',[
+        'user' => \Illuminate\Support\Facades\Auth::user() ?? null
+    ]);
+})->name('mastersreg');
+
+Route::get('/masters-2022/info', function () {
+    return Inertia::render('MastersInfo',[
+        'user' => \Illuminate\Support\Facades\Auth::user() ?? null
+    ]);
+})->name('mastersinfo');
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Route::get('/admin/assign', function (){
