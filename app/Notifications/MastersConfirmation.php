@@ -44,7 +44,7 @@ class MastersConfirmation extends Notification
         $total = TournamentEntry::with('payment')->where('tournament_id',3)->whereHas('payment')->count();
         return (new MailMessage)
             ->subject('Manchester Masters 2022')
-            ->line('This is a quick email to thank you for signing up for MWO2')
+            ->line('This is a quick email to thank you for signing up for Manchester Masters')
             ->line('You are registrant: ' . $total)
 //            ->action('Check the PDGA page (updated every 24 hours)', 'https://www.pdga.com/tour/event/56573')
             ->line('Thanks for signing up, and see you on the course');

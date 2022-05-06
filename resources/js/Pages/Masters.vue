@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-                <img class="absolute inset-0 w-full h-full object-cover" src="https://dontshootdg.s3.eu-west-2.amazonaws.com/masters_cover.png" alt="">
+                <img class="absolute inset-0 w-full h-full object-cover" src="https://dontshootdg.s3.eu-west-2.amazonaws.com/2022.png" alt="">
             </div>
         </main>
 
