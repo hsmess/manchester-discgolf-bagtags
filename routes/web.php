@@ -31,7 +31,8 @@ Route::get('/pdga-export/{tournament}',function (\App\Models\Tournament  $tourna
             'first_name' => $item->first_name,
             'last_name' => $item->last_name,
             'pdga_number' => $item->pdga_number,
-            'division' => $item->division
+            'division' => $item->division,
+            'email' => $item->user->email
         ]);
     });
     return response((string) $csv, 200, [
