@@ -54,6 +54,10 @@
                                         <option>MA60</option>
                                         <option>FA40</option>
                                         <option>FA50</option>
+                                        <option>MPO</option>
+                                        <option>FPO</option>
+                                        <option>MA2</option>
+                                        <option>FA2</option>
                                     </select>
                                 </div>
                         </div>
@@ -184,7 +188,7 @@ export default {
                 'acepot' : self.acepot,
                 'donation': self.donation,
                 'paymentConfirmed': false,
-                'tournament_id': 1,
+                'tournament_id': 3,
                 'first_name': self.first_name,
                 'last_name': self.last_name,
                 'division': self.division,

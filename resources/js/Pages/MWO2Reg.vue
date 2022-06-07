@@ -61,7 +61,7 @@
                                         <option>MPO</option>
                                         <option>FPO</option>
                                     </select>
-                                    <p class="mt-2 text-sm text-gray-500">MPO and FPO have been added as options. Masters player? <a href="/masters-2022">Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!</a></p>
+                                    <p class="mt-2 text-sm text-gray-500">MPO and FPO have been added as options. Masters player? <a href="/masters-2022">Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!</a>s</p>
 
                                 </div>
                         </div>

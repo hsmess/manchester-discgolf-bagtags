@@ -7316,6 +7316,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -7389,7 +7393,7 @@ __webpack_require__.r(__webpack_exports__);
         'acepot': self.acepot,
         'donation': self.donation,
         'paymentConfirmed': false,
-        'tournament_id': 1,
+        'tournament_id': 3,
         'first_name': self.first_name,
         'last_name': self.last_name,
         'division': self.division,
@@ -41721,7 +41725,8 @@ var render = function() {
                           _vm._v(
                             "Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!"
                           )
-                        ])
+                        ]),
+                        _vm._v("s")
                       ])
                     ])
                   ])
@@ -42944,7 +42949,15 @@ var render = function() {
                           _vm._v(" "),
                           _c("option", [_vm._v("FA40")]),
                           _vm._v(" "),
-                          _c("option", [_vm._v("FA50")])
+                          _c("option", [_vm._v("FA50")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("MPO")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("FPO")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("MA2")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("FA2")])
                         ]
                       )
                     ])
