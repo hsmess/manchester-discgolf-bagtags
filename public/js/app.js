@@ -6435,6 +6435,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -41703,14 +41705,23 @@ var render = function() {
                           _vm._v(" "),
                           _c("option", [_vm._v("FA3")]),
                           _vm._v(" "),
-                          _c("option", [_vm._v("FA4")])
+                          _c("option", [_vm._v("FA4")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("MPO")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("FPO")])
                         ]
                       ),
                       _vm._v(" "),
                       _c("p", { staticClass: "mt-2 text-sm text-gray-500" }, [
                         _vm._v(
-                          "If this tournament doesn't sell out within a month, we will open masters divisions MA40, MA50, MA60, FA40, FA50, FA60. Masters player? Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!"
-                        )
+                          "MPO and FPO have been added as options. Masters player? "
+                        ),
+                        _c("a", { attrs: { href: "/masters-2022" } }, [
+                          _vm._v(
+                            "Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!"
+                          )
+                        ])
                       ])
                     ])
                   ])

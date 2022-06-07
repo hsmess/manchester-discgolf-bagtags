@@ -58,8 +58,10 @@
                                         <option>FA2</option>
                                         <option>FA3</option>
                                         <option>FA4</option>
+                                        <option>MPO</option>
+                                        <option>FPO</option>
                                     </select>
-                                    <p class="mt-2 text-sm text-gray-500">If this tournament doesn't sell out within a month, we will open masters divisions MA40, MA50, MA60, FA40, FA50, FA60. Masters player? Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!</p>
+                                    <p class="mt-2 text-sm text-gray-500">MPO and FPO have been added as options. Masters player? <a href="/masters-2022">Register for our Masters Tournament happening at Lilford Park the weekend before this event (25th June)!</a></p>
 
                                 </div>
                         </div>
