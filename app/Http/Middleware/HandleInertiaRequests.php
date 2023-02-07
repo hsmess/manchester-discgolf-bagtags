@@ -38,7 +38,7 @@ class HandleInertiaRequests extends Middleware
     {
         return array_merge(parent::share($request), [
             'user' => fn () => $request->user()
-                ? $request->user()->only('id', 'name', 'email','profile_picture','paid_2021','currentTagPosition')
+                ? $request->user()->only('id', 'name', 'email','profile_picture','paid_2023','currentTagPosition')
                 : null,
             'stripe' => config('enums.stripe_key')
             ]);
