@@ -45,6 +45,18 @@ Route::get('/pdga-export/{tournament}',function (\App\Models\Tournament  $tourna
 
 
 Route::get('/', function (){
+    return Inertia::render('TwentyTwentyThree', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+        'tags' => BagtagResource::collection(Bagtag::where('year',2023)->get()->sortBy('tag_number')),
+        'users' => UserResource::collection(\App\Models\User::where('paid_2023',true)->get()->sortBy('name'))
+    ]);
+});
+
+
+Route::get('/2022', function (){
     return Inertia::render('TwentyTwentyTwo', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
@@ -70,14 +82,14 @@ Route::get('/2021', function () {
 });
 
 Route::get('/update-tag',function (Request $request){
-    if($request->year == 2022)
+    if($request->year == 2023)
     {
-        $tag = Bagtag::where('tag_number',$request->tag)->where('year',2022)->get();
+        $tag = Bagtag::where('tag_number',$request->tag)->where('year',2023)->get();
 
 
-        return Inertia::render('ChangeTagTwentyTwo',[
+        return Inertia::render('ChangeTagTwentyThree',[
             'tag' => BagtagResource::collection($tag)->first(),
-            'users' => UserResource::collection(\App\Models\User::where('paid_2022',true)->get()->sortBy('name'))
+            'users' => UserResource::collection(\App\Models\User::where('paid_2023',true)->get()->sortBy('name'))
         ]);
     }
 });
@@ -163,17 +175,15 @@ Route::get('/masters-2022/info', function () {
 
 
 
-
-
 Route::get('/admin/assign', function (){
-    $first = Bagtag::where('year',2022)->first();
+    $first = Bagtag::where('year',2023)->first();
     if($first == null)
     {
-        $players = User::where('paid_2022',true)->get()->sortByDesc(function ($item){
+        $players = User::where('paid_2023',true)->get()->sortByDesc(function ($item){
             return $item->donation_amount;
         });
         //check if we already have tags for some reason...
-        $first = DB::table('bagtags')->where('year',2022)->orderByDesc('created_at')->first();
+        $first = DB::table('bagtags')->where('year',2023)->orderByDesc('created_at')->first();
         if($first != null)
         {
             $initial_tag = $first['tag_number'] + 1;
@@ -184,7 +194,7 @@ Route::get('/admin/assign', function (){
         $players->each(function ($item) use (&$initial_tag){
             $t = new Bagtag();
             $t->tag_number = $initial_tag;
-            $t->year = 2022;
+            $t->year = 2023;
             $t->save();
             $initial_tag++;
             $item->bagtags()->attach($t);
@@ -192,14 +202,14 @@ Route::get('/admin/assign', function (){
         });
     }
     else{
-        $start_tag = Bagtag::where('year',2022)->orderByDesc('id')->first()->tag_number + 1;
+        $start_tag = Bagtag::where('year',2023)->orderByDesc('id')->first()->tag_number + 1;
 
-        $users = \App\Models\User::where('paid_2022',true)->get()->filter(function ($item) {
+        $users = \App\Models\User::where('paid_2023',true)->get()->filter(function ($item) {
             return $item->current_tag_position == "Unassigned";
         })->each(function ($item) use (&$start_tag){
             $t = new Bagtag();
             $t->tag_number = $start_tag;
-            $t->year = 2022;
+            $t->year = 2023;
             $t->save();
             $start_tag++;
             $item->bagtags()->attach($t);
@@ -211,7 +221,7 @@ Route::get('/admin/assign', function (){
 });
 
 Route::get('admin/qummec-duHboh-dexhy1/notify-everyone',function (){
-    User::where('paid_2022',true)->get()->each(function ($user){
+    User::where('paid_2023',true)->get()->each(function ($user){
 //        ray($user->current_tag_position);
         $user->notify(new EmailTagPos($user->current_tag_position));
     });

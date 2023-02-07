@@ -21,7 +21,7 @@
                <div class="inline-block align-bottom bg-rose-400 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                        <div class="sm:flex sm:items-start">
-                           <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-rose-100 sm:mx-0 sm:h-10 sm:w-10">
+                           <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-rose-200 sm:mx-0 sm:h-10 sm:w-10">
                                <!-- Heroicon name: outline/exclamation -->
                                <svg class="h-6 w-6 text-rose-400"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -42,14 +42,14 @@
                                                <option v-for="user in parsed_users" :value="user.id">{{user.name}}</option>
                                            </select>
                                        </div>
-                                       <p class="mt-2 text-sm text-gray-500" id="new-owner-description">This user's current tag will become empty.</p>
+                                       <p class="mt-2 text-sm text-gray-500" id="new-owner-description">Make sure you also update the tag for the person who you remove, if you can!</p>
                                    </div>
                                </div>
                            </div>
                        </div>
                    </div>
                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                       <button type="button" @click="processUpdateTag()" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-rose-500 text-base font-medium text-white hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 sm:ml-3 sm:w-auto sm:text-sm">
+                       <button type="button" @click="processUpdateTag()" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-rose-400 text-base font-medium text-white hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 sm:ml-3 sm:w-auto sm:text-sm">
                            Update Tag
                        </button>
                        <button type="button" @click="tagBeingEdited = null;" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
@@ -109,7 +109,7 @@
                </ul>
                <ul class="divide-y divide-gray-200" v-else>
                    <li>
-                       <div class="block hover:bg-rose-200">
+                       <div class="block hover:bg-lavender">
                            <div class="px-4 py-4 sm:px-6">
                                <div class="flex items-center justify-between">
                                    <p class="text-sm font-medium text-rose-600 truncate">
@@ -129,6 +129,22 @@
 </template>
 
 <style scoped>
+
+    .bg-rose-400{
+        background-color: lavender;
+    }
+    .bg-lavender{
+        background-color: lavenderblush;
+    }
+    .text-rose-200{
+        color: lavenderblush;
+    }
+    .text-rose-400{
+        color: lavender;
+    }
+    .text-rose-600{
+        color: mediumpurple;
+    }
     .bg-gray-100 {
         background-color: #f7fafc;
         background-color: rgba(247, 250, 252, var(--tw-bg-opacity));

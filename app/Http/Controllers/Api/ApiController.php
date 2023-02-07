@@ -22,18 +22,18 @@ class ApiController extends Controller
     public function pay(Request $request){
 
         $user = User::find($request->user_id);
-        if($request->shipping_required)
-        {
-            $address = new Address();
-            $address->address_line_1 = $request->address_line_1;
-            $address->address_line_2 = $request->address_line_2;
-            $address->city = $request->city;
-            $address->state = $request->county;
-            $address->postal_code = $request->postcode;
-            $address->save();
-            $user->shipping_address_id = $address->id;
-            $user->save();
-        }
+//        if($request->shipping_required)
+//        {
+//            $address = new Address();
+//            $address->address_line_1 = $request->address_line_1;
+//            $address->address_line_2 = $request->address_line_2;
+//            $address->city = $request->city;
+//            $address->state = $request->county;
+//            $address->postal_code = $request->postcode;
+//            $address->save();
+//            $user->shipping_address_id = $address->id;
+//            $user->save();
+//        }
         Stripe::setApiKey(config('enums.stripe_secret'));
         $tagOrder = new TagOrder();
         if($request->shipping_required)
@@ -80,8 +80,7 @@ class ApiController extends Controller
             'metadata' => [
                 'name' => $user->name,
                 'email' => $user->email,
-                'source' => 'bagtag-app-2022',
-                'donation' => $request->donation
+                'source' => 'bagtag-app-2023',
             ]
         ]);
         $tagOrder->payment_intent_id = $payment_intent->id;
@@ -129,7 +128,7 @@ class ApiController extends Controller
             $payment->fee = $balance_transaction->fee;
             $payment->amount = $payment_intent->amount;
             $payment->save();
-            $to->user->paid_2022 = true;
+            $to->user->paid_2023 = true;
             $to->user->save();
         }
         catch (\Exception $e){
@@ -150,8 +149,8 @@ class ApiController extends Controller
 //        $bagtag->currently_unassigned = false;
         $bagtag->save();
         return [
-            'tags' => Bagtag::collection(\App\Models\Bagtag::where('year',2022)->get()),
-            'users' => \App\Http\Resources\User::collection(\App\Models\User::where('paid_2022',true)->get()->sortBy('name'))
+            'tags' => Bagtag::collection(\App\Models\Bagtag::where('year',2023)->get()),
+            'users' => \App\Http\Resources\User::collection(\App\Models\User::where('paid_2023',true)->get()->sortBy('name'))
         ];
     }
 }

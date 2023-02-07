@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c651e129-bada-49a4-bf55-6e6182511aa6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/MWO2Reg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/MWO2Reg.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/MastersReg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/MastersReg.vue" afterDir="false" />
-    </list>
+    <list default="true" id="c651e129-bada-49a4-bf55-6e6182511aa6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,15 +172,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/Pages/Masters" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/Pages" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/Pages" />
       <recent name="$PROJECT_DIR$/resources/js/Pages/Masters" />
       <recent name="$PROJECT_DIR$/app/Notifications" />
-      <recent name="$PROJECT_DIR$/resources/js/Pages" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
@@ -261,7 +257,12 @@
       <workItem from="1650900346081" duration="1350000" />
       <workItem from="1651662110391" duration="10137000" />
       <workItem from="1654587838583" duration="1335000" />
-      <workItem from="1654602782913" duration="875000" />
+      <workItem from="1654602782913" duration="1237000" />
+      <workItem from="1655296140517" duration="296000" />
+      <workItem from="1661433973148" duration="682000" />
+      <workItem from="1663844205864" duration="1528000" />
+      <workItem from="1675770673642" duration="3053000" />
+      <workItem from="1675781614449" duration="3987000" />
     </task>
     <servers />
   </component>

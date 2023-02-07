@@ -6,14 +6,11 @@
             </div>
 
             <div class="mt-8 text-2xl">
-                Get your 2022 BagTag now
+                Get your 2023 BagTag now
             </div>
 
             <div class="mt-6 text-gray-500">
-                This is the place where you can sign up for your 2022 BagTag. You can either have it shipped to you, or arrange to collect it the next time you are at the course.
-
-                All users will sign up via the system, and your initial tag will be allocated by the size of donation you make to the Lilford campaign... So what are you waiting for!
-
+                This is the place where you can sign up for your 2023 BagTag.
                 Please note that by purchasing a BagTag you will also become a member of Manchester Disc Golf for free.
                 <inertia-link href="/buy">
                     <div class="mt-3 flex items-center text-sm font-semibold text-yellow-700">

@@ -247,6 +247,12 @@
         color: rgba(203, 213, 224, var(--tw-text-opacity));
     }
 }
+.bg-rose-400{
+    background-color: lavender;
+}
+.bg-rose-200{
+    background-color: lavender;
+}
 </style>
 
 <script>

@@ -42,11 +42,11 @@ class EmailTagPos extends Notification
     {
         return (new MailMessage)
                     ->subject('Manchester Bagtags - Current Tag')
-                    ->line('This is an email reminder for your current (or newly assigned) bagtag for the 2022 season')
+                    ->line('This is an email reminder for your current (or newly assigned) bagtag for the 2023 season')
                     ->line('Your current bagtag: ' . $this->ctp)
                     ->line('If you physically have another tag than this in your possession, please click the button below and update your tag, or scan the QR code on your tag.')
                     ->action('Update your tag!', url('/'))
-                    ->line('If you have no bagtag or this is the first time you are seeing this email, you can now collect it from any committee member at the course (after 01/04/2022). If you selected shipping your tag will be posted out to you shortly.');
+                    ->line('If you have no bagtag or this is the first time you are seeing this email, you can now collect it from any committee member at the course (after 01/04/2023).');
     }
 
     /**
