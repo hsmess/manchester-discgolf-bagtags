@@ -113,7 +113,7 @@
                            <div class="px-4 py-4 sm:px-6">
                                <div class="flex items-center justify-between">
                                    <p class="text-sm font-medium text-rose-600 truncate">
-                                       Tags will be allocated on March 28th
+                                       Tags will be allocated soon...
                                         <br>
                                        Not yet signed up? Head over and <a style="color: black" href="/register"> sign up now!</a>
                                    </p>

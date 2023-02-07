@@ -50405,7 +50405,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                                    Tags will be allocated on March 28th\n                                     "
+                                "\n                                    Tags will be allocated soon...\n                                     "
                               ),
                               _c("br"),
                               _vm._v(
