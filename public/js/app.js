@@ -5003,7 +5003,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -37517,7 +37516,7 @@ var render = function() {
                     staticClass:
                       "mt-3 flex items-center text-sm font-semibold text-yellow-700"
                   },
-                  [_c("div", [_vm._v("Tags begin 28/03/2022")])]
+                  [_c("div", [_vm._v("Tags begin soon...")])]
                 )
           ])
         ]),
@@ -37605,7 +37604,7 @@ var render = function() {
                       staticClass:
                         "mt-3 flex items-center text-sm font-semibold text-yellow-700"
                     },
-                    [_c("div", [_vm._v("Tags begin 28/03/2022")])]
+                    [_c("div", [_vm._v("Tags begin soon...")])]
                   )
             ])
           ]
