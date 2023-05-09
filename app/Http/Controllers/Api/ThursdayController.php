@@ -114,7 +114,8 @@ class ThursdayController extends Controller
             $payment->amount = $payment_intent->amount;
             $payment->save();
 
-
+            $to->payment_id = $payment->id;
+            $to->save();
         }
         catch (\Exception $e){
             //We have a big problem. Not able to retrieve data from the charge!
