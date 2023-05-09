@@ -48063,7 +48063,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    '\n                Pay for Thursday Night League "subs"\n            '
+                    '\n                Pay for Tuesday Night League "subs"\n            '
                   )
                 ]
               )
@@ -48929,7 +48929,7 @@ var render = function() {
                                     _vm._v(
                                       " " +
                                         _vm._s(_vm.amountOfTickets) +
-                                        'x 2022 Thursday Night League "subs" - '
+                                        'x 2023 Tuesday Night League "subs" - '
                                     ),
                                     _c(
                                       "span",
@@ -48947,7 +48947,7 @@ var render = function() {
                                         _vm._v(
                                           " " +
                                             _vm._s(_vm.amountOfTickets) +
-                                            'x 2022 Thursday Night League "acepot" - '
+                                            'x 2023 Tuesday Night League "acepot" - '
                                         ),
                                         _c(
                                           "span",
@@ -49018,7 +49018,7 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "Pay your Thursday Night League subs"
+                                          "Pay your Tuesday Night League subs"
                                         )
                                       ]
                                     ),
@@ -49309,7 +49309,7 @@ var render = function() {
                                   _vm._v(
                                     " " +
                                       _vm._s(_vm.amountOfTickets) +
-                                      'x 2022 Thursday Night League "subs" - '
+                                      'x 2022 Tuesday Night League "subs" - '
                                   ),
                                   _c(
                                     "span",
@@ -49323,7 +49323,7 @@ var render = function() {
                                       _vm._v(
                                         " " +
                                           _vm._s(_vm.amountOfTickets) +
-                                          'x 2022 Thursday Night League "acepot" - '
+                                          'x 2022 Tuesday Night League "acepot" - '
                                       ),
                                       _c(
                                         "span",
@@ -49657,7 +49657,7 @@ var render = function() {
                                 _vm._v(
                                   " " +
                                     _vm._s(_vm.amountOfTickets) +
-                                    'x 2022 Thursday Night League "subs" - '
+                                    'x 2022 Tuesday Night League "subs" - '
                                 ),
                                 _c(
                                   "span",
@@ -49671,7 +49671,7 @@ var render = function() {
                                     _vm._v(
                                       " " +
                                         _vm._s(_vm.amountOfTickets) +
-                                        'x 2022 Thursday Night League "acepot" - '
+                                        'x 2022 Tuesday Night League "acepot" - '
                                     ),
                                     _c(
                                       "span",

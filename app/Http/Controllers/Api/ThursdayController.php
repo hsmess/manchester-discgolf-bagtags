@@ -64,7 +64,7 @@ class ThursdayController extends Controller
             'metadata' => [
                 'name' => $user->name,
                 'email' => $user->email,
-                'source' => 'thursday-night-league-2022',
+                'source' => 'tuesday-night-league-2023',
                 'lilford' => $ticketOrder->donation
             ]
         ]);

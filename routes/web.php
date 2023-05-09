@@ -116,7 +116,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/buy', function () {
 })->name('buy');
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/thursday-night-league', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/tuesday-night-league', function () {
     return Inertia::render('Thursday');
 })->name('thursday');
 

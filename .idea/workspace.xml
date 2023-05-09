@@ -7,6 +7,7 @@
     <list default="true" id="c651e129-bada-49a4-bf55-6e6182511aa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ThursdayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ThursdayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Thursday.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Thursday.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -267,7 +268,7 @@
       <workItem from="1663844205864" duration="1528000" />
       <workItem from="1675770673642" duration="3053000" />
       <workItem from="1675781614449" duration="5766000" />
-      <workItem from="1683615659318" duration="4461000" />
+      <workItem from="1683615659318" duration="4851000" />
     </task>
     <servers />
   </component>

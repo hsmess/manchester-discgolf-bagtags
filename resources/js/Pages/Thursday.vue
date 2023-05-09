@@ -2,7 +2,7 @@
     <layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Pay for Thursday Night League "subs"
+                Pay for Tuesday Night League "subs"
             </h2>
         </template>
 
@@ -146,15 +146,15 @@
                                         Your Order
                                     </div>
                                     <div class="bg-gray-50 px-4 py-5 sm:p-6">
-                                        <div> {{ amountOfTickets }}x 2022 Thursday Night League "subs" - <span class="text-gray-900 text-lg">£{{ ticketTotalCost }}</span></div>
-                                        <div v-if="acepot != 0"> {{ amountOfTickets }}x 2022 Thursday Night League "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>
+                                        <div> {{ amountOfTickets }}x 2023 Tuesday Night League "subs" - <span class="text-gray-900 text-lg">£{{ ticketTotalCost }}</span></div>
+                                        <div v-if="acepot != 0"> {{ amountOfTickets }}x 2023 Tuesday Night League "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>
                                         <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>
                                         <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>  </div>
                                 </div>
                                 <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
                                     <div class="md:grid md:grid-cols-3 md:gap-6">
                                         <div class="md:col-span-1">
-                                            <h3 class="text-lg font-medium leading-6 text-gray-900">Pay your Thursday Night League subs</h3>
+                                            <h3 class="text-lg font-medium leading-6 text-gray-900">Pay your Tuesday Night League subs</h3>
                                             <p class="mt-1 text-sm text-gray-500">
                                                 Please pre-pay online to save hassle on the day. Your account will be credited with a number of "tickets" and one will be deducted when you play.
                                             </p>
@@ -218,8 +218,8 @@
                                     Your Order
                                 </div>
                                 <div class="bg-gray-50 px-4 py-5 sm:p-6">
-                                    <div> {{ amountOfTickets }}x 2022 Thursday Night League "subs" - <span class="text-gray-900 text-lg">£{{ ticketTotalCost }}</span></div>
-                                    <div v-if="acepot != 0"> {{ amountOfTickets }}x 2022 Thursday Night League "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>
+                                    <div> {{ amountOfTickets }}x 2022 Tuesday Night League "subs" - <span class="text-gray-900 text-lg">£{{ ticketTotalCost }}</span></div>
+                                    <div v-if="acepot != 0"> {{ amountOfTickets }}x 2022 Tuesday Night League "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>
                                     <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>
                                     <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>  </div>
                             </div>
@@ -277,8 +277,8 @@
                                     Your Order
                                 </div>
                                 <div class="bg-gray-50 px-4 py-5 sm:p-6">
-                                    <div> {{ amountOfTickets }}x 2022 Thursday Night League "subs" - <span class="text-gray-900 text-lg">£{{ ticketTotalCost }}</span></div>
-                                    <div v-if="acepot != 0"> {{ amountOfTickets }}x 2022 Thursday Night League "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>
+                                    <div> {{ amountOfTickets }}x 2022 Tuesday Night League "subs" - <span class="text-gray-900 text-lg">£{{ ticketTotalCost }}</span></div>
+                                    <div v-if="acepot != 0"> {{ amountOfTickets }}x 2022 Tuesday Night League "acepot" - <span class="text-gray-900 text-lg">£{{ acepotTotalCost }}</span></div>
                                     <div v-if="donation > 0"> 1x Lilford Park Donation - <span class="text-gray-900 text-lg">£{{ donationCost }}</span></div>
                                     <div><span class="text-gray-900 text-lg">Total: £{{totalCost}}</span></div>  </div>
                             </div>
