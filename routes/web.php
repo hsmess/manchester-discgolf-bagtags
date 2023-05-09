@@ -227,3 +227,12 @@ Route::get('admin/qummec-duHboh-dexhy1/notify-everyone',function (){
     });
 });
 
+
+Route::get('admin/bq9RT75pTmrn/ticket-orders',function (){
+    print_r('Name,Date,Total,Tickets,Ace-pot,Lilford'); print_r('<br>');
+    \App\Models\TicketOrder::where('created_at','>', \Carbon\Carbon::now()->startOfYear())->get()->sortBy('user_id')->map(function ($item){
+        $user = User::where('id',$item->user_id)->first();
+        print_r($user->name .','. $item->created_at->format('d/m/Y') .',' . number_format($item->amount/100,2) .  ',' . $item->tickets . ',' .  number_format($item->acepot,2)  . ',' . number_format($item->lilford,2) ); print_r('<br>');
+    });
+});
+

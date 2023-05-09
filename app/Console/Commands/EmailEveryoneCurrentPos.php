@@ -40,8 +40,7 @@ class EmailEveryoneCurrentPos extends Command
     public function handle()
     {
         $players = User::where('paid_2023',true)->get()->each(function ($user){
-//            $user->notify(new EmailTagPos($user->current_tag_position));
-            ray($user->current_tag_position);
+            $user->notify(new EmailTagPos($user->current_tag_position));
         });
     }
 }
