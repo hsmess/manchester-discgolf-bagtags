@@ -86,10 +86,10 @@ Route::get('/update-tag',function (Request $request){
     {
         $tag = Bagtag::where('tag_number',$request->tag)->where('year',2023)->get();
 
-
         return Inertia::render('ChangeTagTwentyThree',[
             'tag' => BagtagResource::collection($tag)->first(),
-            'users' => UserResource::collection(\App\Models\User::where('paid_2023',true)->get()->sortBy('name'))
+            'users' => UserResource::collection(\App\Models\User::where('paid_2023',true)->get()->sortBy('name')),
+            'selected_user' => $request->all()['user'] ?? null
         ]);
     }
 });

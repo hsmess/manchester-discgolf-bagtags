@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends JsonResource
+class UserApi extends JsonResource
 {
     use HasApiTokens;
     /**
@@ -16,6 +16,10 @@ class User extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'last_known_tag' => $this->current_tag_position
+        ];
     }
 }

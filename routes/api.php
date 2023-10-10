@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApiController;
 use App\Http\Controllers\Api\ThursdayController;
 use App\Http\Controllers\Api\TournamentController;
+use App\Http\Resources\UserApi as UserApiResource;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +19,10 @@ use App\Http\Controllers\Api\TournamentController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::middleware('auth:sanctum')->get('/users',function (Request $request){
+    return \Response::json(UserApiResource::collection(\App\Models\User::where('paid_2023',true)->get()));
 });
 
 Route::post('/user/pay/confirm',[ApiController::class,'confirm']);
